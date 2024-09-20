@@ -6,11 +6,11 @@ from datetime import datetime
 import sys
 sys.path.append("/home/rno-g/flowerpy")
 
-from utils import get_peak2peak
+from utils import get_peak2peak_phased, get_coinc_rate_phased
 
 HOST = ''
 PORT = 9000
-JSON_FILE = "getting_SNR_from_p2p_07_18.json"
+JSON_FILE = "efficiency_curve_phased_at_4,5deg.json"
 
 # ----------------------------
 # Simulated Peak-to-Peak Analysis (replace with your real logic)
@@ -19,17 +19,13 @@ RATE = 1000
 
 def run_peak_to_peak_analysis(attenuation_percent, attenuation_scale):
     # Replace with real signal processing here
-    #coinc = get_coinc_rate()
-    time.sleep(0.01)
+    coinc = get_coinc_rate_phased()
+    time.sleep(0.5)
 
-    ptp = get_peak2peak()
-    time.sleep(0.01)
     return {
         "attenuation_percent": attenuation_percent,
         "attenuation_scale": attenuation_scale,
-        #"coincidence_rate": coinc,
-        "peak_to_peak": ptp
-
+        "coincidence_rate": coinc,
     }
 
 # ----------------------------
@@ -54,8 +50,8 @@ def handle_command(cmd, all_reports = None):
         print(f" Running attenuation scan at {attenuation_percent}%")
 
         report = run_peak_to_peak_analysis(attenuation_percent, attenuation_scale)
-        
-        report["report_name"] = "The efficiency is "
+        coincidence=report["coincidence_rate"]
+        report["report_name"] = "The efficiency is "+ str(coincidence/RATE)
         #save_report(report)
         all_reports.append(report)
 

@@ -6,7 +6,7 @@ from datetime import datetime
 import sys
 sys.path.append("/home/rno-g/flowerpy")
 
-from utils import get_peak2peak
+from utils import get_peak2peak_phased, get_coinc_rate_phased
 
 HOST = ''
 PORT = 9000
@@ -22,7 +22,7 @@ def run_peak_to_peak_analysis(attenuation_percent, attenuation_scale):
     #coinc = get_coinc_rate()
     time.sleep(0.01)
 
-    ptp = get_peak2peak()
+    ptp = get_peak2peak_phased()
     time.sleep(0.01)
     return {
         "attenuation_percent": attenuation_percent,
@@ -54,7 +54,7 @@ def handle_command(cmd, all_reports = None):
         print(f" Running attenuation scan at {attenuation_percent}%")
 
         report = run_peak_to_peak_analysis(attenuation_percent, attenuation_scale)
-        
+
         report["report_name"] = "The efficiency is "
         #save_report(report)
         all_reports.append(report)

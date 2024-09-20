@@ -1,4 +1,3 @@
-
 import socket
 import time
 import json
@@ -7,15 +6,15 @@ from datetime import datetime
 import sys
 sys.path.append("/home/rno-g/flowerpy")
 
-from utils import get_peak2peak, get_coinc_rate
+from utils import get_peak2peak_phased, get_coinc_rate_phased
 
 HOST = ''
 PORT = 9000
-JSON_FILE = "fine_scan_all_angles_07_16.json"
+JSON_FILE = "phased_full_detailed_scan_07_19_2filters.json"
 RATE = 1000  # normalization constant
 
 def run_peak_to_peak_analysis(angle_deg, att_code, percent):
-    coinc = get_coinc_rate()
+    coinc = get_coinc_rate_phased()
     time.sleep(0.5)
 
     return {
@@ -78,4 +77,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
