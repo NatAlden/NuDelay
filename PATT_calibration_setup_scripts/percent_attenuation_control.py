@@ -6,16 +6,12 @@ bus = smbus.SMBus(2)
 output_reg = 0x01
 config_reg = 0x03
 
-# Channel mappings
+# Channel info
 CHANNEL_INDEXES = [0, 1, 2, 3]
 CHANNEL_ADDRESSES = [0x3e, 0x3c, 0x3a, 0x38]
 CHANNEL_LABELS = ['A', 'B', 'C', 'D']
 
-# Fit parameters from exponential model
-A = 91.916
-k = 0.026
-
-# --- I2C functions
+# --- I2C functions ---
 def write(i2c_address, register, cmd):
     bus.write_byte_data(i2c_address, register, cmd)
 
@@ -40,37 +36,45 @@ def setAttenuation(address, atten_value=0):
     value = int(mapped, 2)
     write(address, output_reg, value)
 
-# --- Percentage to attenuation value
+# --- Logarithmic model ---
 def percent_to_attenuation(p):
+    """
+    Converts signal strength percentage to attenuation value (0–127 scale)
+    using the inverse of 100 * 10^(-atten/80)
+    """
     if p >= 100:
         return 0
     if p <= 0:
         return 127
     try:
-        x = -np.log(p / A) / k
-        return int(round(np.clip(x, 0, 127)))
+        attenuation = -80 * np.log10(p / 100)
+        return int(round(np.clip(attenuation, 0, 127)))
     except:
         return 127
 
-# --- Main function to apply attenuation to all channels
-def apply_percentage_to_all_channels(percent):
+# --- Apply attenuation ---
+def apply_percentage(percent):
     attenuation = percent_to_attenuation(percent)
-    print(f"🛠️  Applying {percent:.1f}% → Attenuation = {attenuation}")
+    print(f"\nTarget %: {percent:.2f} → Attenuation value: {attenuation}")
 
     for i in CHANNEL_INDEXES:
         addr = CHANNEL_ADDRESSES[i]
         setup(addr)
         setOutput(addr)
         setAttenuation(addr, attenuation)
-    return attenuation
 
-# If run directly (optional CLI interface)
-if __name__ == "__main__":
+    print("✅ Attenuation applied to channels A, B, C, D.")
+
+# --- Main ---
+def main():
     try:
-        percent = float(input("Enter desired signal strength (1–100%): "))
-        if not (0 < percent <= 100):
+        percent = float(input("Enter desired signal strength (0–100%): "))
+        if not (0 <= percent <= 100):
             raise ValueError
-        apply_percentage_to_all_channels(percent)
+        apply_percentage(percent)
     except ValueError:
-        print("❌ Invalid input. Please enter a percentage between 1 and 100.")
+        print(" Please enter a valid percentage between 0 and 100.")
+
+if __name__ == "__main__":
+    main()
 
