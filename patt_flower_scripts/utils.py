@@ -10,7 +10,7 @@ def get_coinc_rate(n_ave = 10):
     ave_rate = 0
     for i in range(n_ave):
         time.sleep(0.05)
-        trig.setScalerOut(0)
+        trig.setScalerOut(3)  #replace 3 by 0 if it doesn't work (it changes with FLOWER firmware updates)
         ave_rate += trig.readSingleScaler()[0]/n_ave
     return ave_rate
 
@@ -64,17 +64,18 @@ def get_noise_rms(n_ave = 100):
     nchans = 4
     ave_rms = [0, 0, 0, 0]
     for i in range(n_ave):
-        dev.bufferClear() 
+        dev.bufferClear()
         dev.softwareTrigger()
         dat= dev.readRam(dev.DEV_FLOWER, 0, 256)
-        
         for ch in range(nchans):
             ave_rms[ch] += np.sqrt(np.mean((np.array(dat[ch])-127)**2))/n_ave
     dev.bufferClear()
     return(ave_rms)
 
 if __name__ == "__main__":
-    print(get_peak2peak_phased())
-    print(get_coinc_rate_phased())
-    print(get_noise_rms())
+    #print(get_peak2peak_phased())
+    #print(get_coinc_rate_phased())
+    #print(get_peak2peak())
+    print(get_coinc_rate())
+    #print(get_noise_rms())
 

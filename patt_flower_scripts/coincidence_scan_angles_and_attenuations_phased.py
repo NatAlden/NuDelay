@@ -10,7 +10,7 @@ from utils import get_peak2peak_phased, get_coinc_rate_phased
 
 HOST = ''
 PORT = 9000
-JSON_FILE = "phased_full_detailed_scan_07_19_2filters.json"
+JSON_FILE = "phased_full_scan_07_28_pulser_drop_30m_150d.json"
 RATE = 1000  # normalization constant
 
 def run_peak_to_peak_analysis(angle_deg, att_code, percent):

@@ -11,7 +11,7 @@ from utils import get_peak2peak, get_coinc_rate
 
 HOST = ''
 PORT = 9000
-JSON_FILE = "fine_scan_all_angles_07_16.json"
+JSON_FILE = "60_-60deg_pulser_drop_Hi_Lo_30_150.json"
 RATE = 1000  # normalization constant
 
 def run_peak_to_peak_analysis(angle_deg, att_code, percent):

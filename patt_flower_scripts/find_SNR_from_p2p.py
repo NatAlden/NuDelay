@@ -10,7 +10,7 @@ from utils import get_peak2peak
 
 HOST = ''
 PORT = 9000
-JSON_FILE = "getting_SNR_from_p2p_07_18.json"
+JSON_FILE = "getting_SNR_from_p2p_07_28.json"
 
 # ----------------------------
 # Simulated Peak-to-Peak Analysis (replace with your real logic)
