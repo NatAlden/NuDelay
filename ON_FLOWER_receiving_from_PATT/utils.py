@@ -77,5 +77,5 @@ if __name__ == "__main__":
     #print(get_coinc_rate_phased())
     #print(get_peak2peak())
     print(get_coinc_rate())
-    #print(get_noise_rms())
+    print(get_noise_rms())
 
