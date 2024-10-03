@@ -6,7 +6,7 @@ import serial
 n_ice = 1.78  # index of refraction in ice
 vertical_seperation = 1  # meters
 c = 299792458  # m/s (speed of light)
-calibration_delays = [5.35, 0, 5.3, 6.35]  # ns
+calibration_delays = [5.19, 0, 5.21, 6.08]  # ns
 
 # === Channel Mapping ===
 CHANNEL_MAP = {"C1": "A", "C2": "B", "C3": "C", "C4": "D"}

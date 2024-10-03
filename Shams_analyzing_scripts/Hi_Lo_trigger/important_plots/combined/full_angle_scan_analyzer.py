@@ -6,14 +6,19 @@ from scipy.optimize import curve_fit
 
 
 # Constants
-SNR_slope =0.239174046644996  # Slope for SNR calculation
+SNR_slope =0.2969020733843431  # Slope for SNR calculation
 
 # Load data
-json_path = Path("Full_scan_2Filters_08_01_plane_HiLo.json")
+json_path = Path("fine_scan_all_angles_07_16.json")
 with json_path.open() as f:
     data = json.load(f)
 
+drop_pat=Path("patt_HiLo_scan_pulser_drop_30_150.json")
+with drop_pat.open() as f:
+    drop_data = json.load(f)
 
+drop_angles_list = drop_data["angles_list"]
+drop_mid_points = drop_data["mid_points"]
 
 def sigmoid(x, x0, k):
     return 1 / (1 + np.exp(-k * (x - x0)))
@@ -67,18 +72,21 @@ for angle, values in angle_data.items():
 
 hilo_peaks = [-45.5, -20.9, 0, 20.9, 45.5]
 
-plt.plot(angles_list, mid_points, marker='o', linestyle='-', color='black')
+plt.plot(angles_list, mid_points, marker='o', linestyle='-', color='black', alpha=0.7, label='Plane Wave Data')
+plt.plot(drop_angles_list, drop_mid_points, marker='o', linestyle='-', color='blue', label='Pulser Drop Data', alpha=0.7)
 plt.xlabel("Angle (degrees)")
 plt.ylabel("SNR at 50% Efficiency")
-plt.title("SNR at 50% Efficiency vs Angle - Hi_Lo Trigger - Plane wave - Double High Pass Filtered")
+plt.title("SNR at 50% Efficiency vs Angle - Hi_Lo Trigger - Plane wave")
 for peak in hilo_peaks:
     plt.axvline(x=peak, color='r', linestyle='--', lw=0.5)
     plt.text(peak-0.5, plt.ylim()[1] * 1.05, f'Angle {peak}°', color='green', rotation=90, va='top', ha='right', fontsize=8)
-
-#plt.ylim(3.65,4.35)
+plt.axhline(y=np.mean(mid_points ) , color='orange', linestyle='--', label='Plane Wave mean')
+plt.axhline(y=np.mean(drop_mid_points), color='blue', linestyle='--', label='Pulser Drop mean')
+plt.ylim(3.65,4.35)
 plt.grid(True)
+plt.legend()
 plt.tight_layout()
-plt.savefig("Full_scan_plane_wave_2filters_08_01_zoom.png", dpi=300)
+plt.savefig("fine_scans_comparative_plot.png", dpi=300)
 
 """
 """

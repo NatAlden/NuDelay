@@ -58,7 +58,7 @@ class Waveform:
             self.ampl = 2.0*numpy.fft.rfft(self.voltage)
 
         if self.n % 2 == 0:
-            self.freq = numpy.linspace(0, 1 / (2. * self.dt), (self.n / 2) + 1)
+            self.freq = numpy.linspace(0, 1 / int(2. * self.dt), int(self.n / 2) + 1)
         else:
             self.freq = numpy.linspace(0,  (self.n - 1.) / (2. * self.dt * self.n), (self.n + 1) / 2)
 

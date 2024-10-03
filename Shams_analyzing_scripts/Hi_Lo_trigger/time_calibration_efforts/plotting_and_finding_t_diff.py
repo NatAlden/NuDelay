@@ -8,7 +8,7 @@ from impulse_response import make_avg_wf
 
 
 # ─────────────── USER-TUNABLE PARAMS ──────────────────────────────────────
-UPSAMPLE_FACTOR = 10
+UPSAMPLE_FACTOR = 100
 SAMPLING_RATE   = 0.472            # GHz   (0.472 GS/s)
 TIME_STEP       = 1.0 / SAMPLING_RATE   # ns
 
@@ -17,7 +17,7 @@ FREQ_MAX_GHZ    = 1             # ← adjust to zoom
 
 Cutoff_Freq_GHz = 0.00 # High-pass filter cutoff frequency, if needed
 
-JSON_FILE       = Path("time_delay_test_20deg.json")
+JSON_FILE       = Path("alignment_test_0deg_08_04_4rd.json")
 
 # -------------------------------------------------------------------------
 def make_avg_wf(wave_list, upsamp=UPSAMPLE_FACTOR, method='cor'):
@@ -131,9 +131,9 @@ plt.xlabel("Time (ns)")
 plt.ylabel("Voltage (a.u.)")
 plt.title("Averaged Waveforms and Window Function")
 plt.legend(fontsize=8, loc='upper right')
-plt.xlim(210, 290)  # Adjust x-axis limit as needed
+plt.xlim(400, 600)  # Adjust x-axis limit as needed
 plt.tight_layout()
-plt.savefig('averaged_waveforms_with_window_20_deg.png', dpi=300)
+plt.savefig('alignment_test_0deg_08_04.png', dpi=300)
 
 
 
