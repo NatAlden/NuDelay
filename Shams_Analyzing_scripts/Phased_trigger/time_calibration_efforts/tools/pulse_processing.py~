@@ -1,0 +1,271 @@
+import ROOT as root
+#import myplot
+import matplotlib.pyplot as plt
+import numpy
+import sys
+import time
+import waveform
+import signal
+import fnmatch
+import os
+import math
+import json
+
+NUPHASE_ROOT_CH = 9
+NUPHASE_VPOL_CH = 7
+NUPHASE_SAMPLE_RATE = 0.66 #1./1.5 #GHz
+#NUPHASE_FIBER_LENGTHS=[0,1,2,3,4,6,8,10,12] #m
+#NUPHASE_FIBER_LENGTHS=[2,3,4,5,6,8,10,12,14] #m
+NUPHASE_FIBER_LENGTHS=[2,3,4,5,6,8,10,12,14] #m
+
+def makeROOTChainFromRun(event_root_dir):
+    '''
+    load in all root files from nuphase run into TChain object
+    '''
+    files_in_event_dir = fnmatch.filter(sorted(os.listdir(event_root_dir)), '*.root')
+    chain = root.TChain("events")
+     
+    for f in files_in_event_dir:
+        chain.Add(event_root_dir+f)
+
+    return chain
+
+def makeTimeDomainAveragePulse(event_dir, cal_pulse_json, ev_num_prefix, upsample_factor=20,
+                               save=False, load_json_file=False, wfm_length=512,
+                               mode='thresh', template=None, xcor_cut=0.5):
+    
+    chain = makeROOTChainFromRun(event_dir)
+
+    #get dict of cal pulses
+    if load_json_file:
+        with open(cal_pulse_json, 'r') as f:
+            cal_pulses = json.load(f)
+    else:
+        cal_pulses = cal_pulse_json
+
+    volts=numpy.zeros((8, wfm_length*upsample_factor))
+    num_cal_pulses=len(cal_pulses['event_num'])
+    sub=0
+    rms=numpy.zeros(NUPHASE_VPOL_CH)
+    baseline_samples_for_rms=50
+
+    for i in range(num_cal_pulses):
+        
+        ev=cal_pulses['event_num'][i]-ev_num_prefix
+
+        pulse = PulseProcess(buffer_length=wfm_length)
+        pulse.getFromROOTTree(chain, ev )
+        _rms = pulse.getBaselineNoise(baseline_samples_for_rms)
+
+        #plt.figure(1)
+        #plt.plot(pulse.wave[0].voltage)
+        #plt.show()
+
+        pulse.upsample(upsample_factor)
+
+        if mode=='thresh':
+            ret=pulse.alignUsingThreshold(len(pulse.wave[0].voltage)/2, 20)
+        elif mode=='xcor':
+            ret=pulse.alignUsingCrossCor(len(pulse.wave[0].voltage)/2, template, xcor_cut)
+        else:
+            print 'time alignment mode either thresh or cc'
+            return 1
+        
+        if ret[0]==None:
+            sub=sub+1
+            continue
+
+        for j in range(NUPHASE_VPOL_CH):
+            rms[j] = rms[j] + _rms[j]
+            volts[j] = volts[j] + pulse.wave[j].voltage
+
+        volts[7] = pulse.wave[0].time
+
+        #plt.figure(1)
+        #plt.plot(pulse.wave[0].voltage, 'o')
+        #plt.show()
+    #plt.show()
+    
+    rms = rms / ((num_cal_pulses-sub) * baseline_samples_for_rms)
+    volts[0:NUPHASE_VPOL_CH] = volts[0:NUPHASE_VPOL_CH] / (num_cal_pulses-sub)
+
+    if save:
+        numpy.savetxt('avg_cal_pulser.txt', volts, delimiter='\t')
+
+        for i in range(7):
+            plt.plot(volts[7], volts[i]- i * 100)
+        plt.show()
+
+    return volts, rms, num_cal_pulses-sub
+
+#--------
+class PulseProcess:
+    '''
+    Class to do signal processing of a single nuphase root event, vpol channels only
+    '''  
+    def __init__(self, buffer_length=512, channels=NUPHASE_VPOL_CH, sampling_rate=NUPHASE_SAMPLE_RATE, data=None, scaling=1.0):
+        self.wave=[]
+        self.wfm_length = buffer_length
+        self.sampling_rate = sampling_rate
+        self.channels = channels
+        
+        #data is None -or- a numpy array with last column=time, other columns=voltage
+        if data is not None:
+            self.channels = data.shape[0]-1
+            self.buffer_length = data.shape[1]
+            self.sampling_rate = data[-1,1] - data[-1,0]
+            
+            for i in range(self.channels):
+                self.wave.append(waveform.Waveform((data[i]-numpy.median(data[i])) * scaling, time=data[-1]))
+                self.wave[i].fft()
+
+    def getFromROOTTree(self, tree, event, channels=None):
+        tree.GetEntry(event)
+        if channels is not None:
+            _wave= numpy.reshape(tree.waveform, (channels, self.wfm_length))
+        else:
+            _wave= numpy.reshape(tree.waveform, (NUPHASE_ROOT_CH, self.wfm_length))
+
+        for i in range(self.channels):
+            self.wave.append(waveform.Waveform(_wave[i,0:self.wfm_length]-numpy.median(_wave[i,0:self.wfm_length]), sampling_rate=self.sampling_rate))
+            self.wave[i].fft()
+
+    def getBaselineNoise(self, baseline_samples=50):
+        pre_rms=[]
+        for i in range(self.channels):
+            pre_rms.append(numpy.sum(numpy.square(self.wave[i].voltage[0:baseline_samples])))
+        return pre_rms
+
+    def nullFiberDelays(self, fiber_per_m_time_ns = 4.95 ):
+        #--about 5 ns per m fiber length
+        for i in range(self.channels):
+            self.wave[i].voltage=numpy.roll(self.wave[i].voltage, -NUPHASE_FIBER_LENGTHS[i]*int(numpy.round(fiber_per_m_time_ns/self.wave[i].dt)))
+            #extra delay for channel 7 and channel 8 due to shorter fiber cable
+            #if i == 6 or i == 7: 
+            #    self.wave[i].voltage=numpy.roll(self.wave[i].voltage, int(numpy.round(1.6/self.wave[i].dt)))
+            self.wave[i].fft()
+
+    def upsample(self, upsample_factor):
+        for i in range(self.channels):
+            self.wave[i].upsampleFreqDomain(upsample_factor)
+            #plt.plot(self.wave[i].time, self.wave[i].voltage)
+        #plt.show()
+        self.wfm_length = len(self.wave[0].voltage)
+        self.sampling_rate = self.wave[0].dt
+
+    def alignUsingPeak(self, location):
+        time=[]
+        for i in range(self.channels):
+            idx=numpy.argmax(self.wave[i].voltage)
+            time.append(self.wave[i].time[idx])
+            self.wave[i].voltage = numpy.roll(self.wave[i].voltage, -idx-location)
+
+        return time
+            
+    def alignUsingThreshold(self, threshold, location):
+        time=[]
+        for i in range(self.channels):
+            above_thresh = numpy.where(self.wave[i].voltage > threshold)[0]
+
+            if len(above_thresh) < 1:
+                return None
+
+            if location is not None:
+                self.wave[i].voltage = numpy.roll(self.wave[i].voltage, -above_thresh[0]-location)
+
+            time.append(self.wave[i].time[above_thresh[0]])
+                        
+        return time
+
+    def alignUsingCrossCor(self, location, cc_wave, corr_cut=0.5):
+        '''
+        cc_wave needs to be a list Waveform classes with length = NUPHASE_VPOL_CH 
+        '''
+        cor = self.crossCorrelate(cc_wave)
+        time=[]
+        
+        for i in range(self.channels):
+
+            if max(cor[i]) < corr_cut:
+                return None, None
+
+            idx = numpy.argmax(cor[i])
+            
+            self.wave[i].voltage = numpy.roll(self.wave[i].voltage, -idx-location)
+            time.append(self.wave[i].time[idx])
+
+        return time, cor
+
+    def crossCorrelate(self, cc_wave=None, norm=True):
+        '''
+        cross correlate vs another instance of the PulseProcess class
+        cc_wave=None ==> autocorrelate
+        '''
+        cor=[]
+        for i in range(self.channels):
+            if cc_wave is not None:
+                if norm:                    
+                    cor.append(self.wave[i].crossCorrelate(cc_wave.wave[i]) /
+                               math.sqrt(max(self.wave[i].crossCorrelate()) * max(cc_wave.wave[i].crossCorrelate())) )
+                else:
+                    cor.append(self.wave[i].crossCorrelate(cc_wave.wave[i]))          
+            else:
+                if norm:
+                    cor.append(self.wave[i].crossCorrelate() / 
+                               math.sqrt(max(self.wave[i].crossCorrelate()) * max(self.wave[i].crossCorrelate())) )
+                else:
+                    cor.append(self.wave[i].crossCorrelate())
+
+        return cor
+
+##--------------------------
+
+if __name__=='__main__':
+    event_directory = '/project/avieregg/nuphase01/scp-full-runs/rootified/run565/event/'
+    ev_num_prefix = 565000000001
+    json_file = "../runs/run565/cal_pulses.json"
+
+    #test threshold method:
+    '''
+    volts, rms = makeTimeDomainAveragePulse(event_directory, json_file, ev_num_prefix, load_json_file=True)
+    plt.figure(1)
+    for i in range(NUPHASE_VPOL_CH):
+        plt.plot(volts[7], volts[i]-100*i, '-', lw=3, c='red')
+    #plt.show()
+    '''
+
+    #test cross cor method:
+    ##load templated cal pulses from file
+    cal_pulse_template = numpy.loadtxt('../data/avg_cal_pulser.txt')
+    template_pulse = PulseProcess(data=cal_pulse_template)
+    template_pulse_2 = PulseProcess(data=cal_pulse_template, scaling=0.2)
+
+    plt.figure()
+    plt.plot(template_pulse.wave[0].voltage)
+    plt.plot(template_pulse_2.wave[0].voltage)
+
+    #check xcor
+    cor = template_pulse.crossCorrelate(template_pulse_2)
+    plt.figure()
+    plt.plot(cor[0])
+    plt.show()
+    
+    
+    volts, rms = makeTimeDomainAveragePulse(event_directory, json_file, ev_num_prefix, load_json_file=True,
+                                            mode='xcor', template=template_pulse)
+
+    plt.figure()
+    for i in range(NUPHASE_VPOL_CH):
+        plt.plot(volts[7], volts[i]-100*i, '-', lw=2, c='blue', alpha=0.7)
+    plt.show()
+
+    plt.figure()
+    for i in range(NUPHASE_VPOL_CH-1):
+        plt.plot(volts[i+1]-volts[0])
+    plt.grid(True)
+    plt.show()
+
+    #for i in range(len(cor)):
+    #    plt.plot(template_pulse.wave[0].time, cor[i], '-', lw=1, c='black')
+    #plt.show()
+    

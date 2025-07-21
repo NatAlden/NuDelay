@@ -1,0 +1,494 @@
+[
+  {
+    "attenuation_percent": 19.31,
+    "attenuation_scale": 60,
+    "coincidence_rate": 992.0000000000002,
+    "peak_to_peak": [
+      54.02000000000001,
+      50.260000000000005,
+      55.199999999999996,
+      64.78
+    ],
+    "report_name": "The efficiency is 0.9920000000000002"
+  },
+  {
+    "attenuation_percent": 18.82,
+    "attenuation_scale": 61,
+    "coincidence_rate": 986.0000000000001,
+    "peak_to_peak": [
+      53.56000000000002,
+      47.65999999999999,
+      62.23999999999999,
+      61.29999999999999
+    ],
+    "report_name": "The efficiency is 0.9860000000000001"
+  },
+  {
+    "attenuation_percent": 18.34,
+    "attenuation_scale": 62,
+    "coincidence_rate": 974.0000000000002,
+    "peak_to_peak": [
+      51.94,
+      46.300000000000004,
+      54.06000000000001,
+      62.760000000000005
+    ],
+    "report_name": "The efficiency is 0.9740000000000002"
+  },
+  {
+    "attenuation_percent": 17.87,
+    "attenuation_scale": 63,
+    "coincidence_rate": 963.9999999999999,
+    "peak_to_peak": [
+      51.3,
+      47.15999999999999,
+      52.06,
+      60.7
+    ],
+    "report_name": "The efficiency is 0.9639999999999999"
+  },
+  {
+    "attenuation_percent": 17.41,
+    "attenuation_scale": 64,
+    "coincidence_rate": 957.0000000000002,
+    "peak_to_peak": [
+      50.81999999999999,
+      45.080000000000005,
+      53.160000000000004,
+      62.120000000000026
+    ],
+    "report_name": "The efficiency is 0.9570000000000002"
+  },
+  {
+    "attenuation_percent": 16.96,
+    "attenuation_scale": 65,
+    "coincidence_rate": 915.0000000000001,
+    "peak_to_peak": [
+      51.38,
+      42.660000000000004,
+      55.47999999999999,
+      55.039999999999985
+    ],
+    "report_name": "The efficiency is 0.9150000000000001"
+  },
+  {
+    "attenuation_percent": 16.53,
+    "attenuation_scale": 66,
+    "coincidence_rate": 887.9999999999998,
+    "peak_to_peak": [
+      49.279999999999994,
+      43.42,
+      47.89999999999999,
+      59.30000000000001
+    ],
+    "report_name": "The efficiency is 0.8879999999999998"
+  },
+  {
+    "attenuation_percent": 16.1,
+    "attenuation_scale": 67,
+    "coincidence_rate": 825.0,
+    "peak_to_peak": [
+      46.66,
+      42.60000000000001,
+      48.040000000000006,
+      56.48000000000001
+    ],
+    "report_name": "The efficiency is 0.825"
+  },
+  {
+    "attenuation_percent": 15.69,
+    "attenuation_scale": 68,
+    "coincidence_rate": 768.9999999999999,
+    "peak_to_peak": [
+      46.46000000000001,
+      41.66000000000002,
+      48.11999999999999,
+      56.480000000000004
+    ],
+    "report_name": "The efficiency is 0.7689999999999999"
+  },
+  {
+    "attenuation_percent": 15.29,
+    "attenuation_scale": 69,
+    "coincidence_rate": 706.0000000000001,
+    "peak_to_peak": [
+      45.79999999999999,
+      41.879999999999995,
+      47.41999999999999,
+      54.82
+    ],
+    "report_name": "The efficiency is 0.7060000000000001"
+  },
+  {
+    "attenuation_percent": 14.89,
+    "attenuation_scale": 70,
+    "coincidence_rate": 600.0,
+    "peak_to_peak": [
+      45.780000000000015,
+      40.620000000000005,
+      44.85999999999999,
+      54.14000000000001
+    ],
+    "report_name": "The efficiency is 0.6"
+  },
+  {
+    "attenuation_percent": 14.51,
+    "attenuation_scale": 71,
+    "coincidence_rate": 580.2,
+    "peak_to_peak": [
+      43.57999999999999,
+      40.519999999999996,
+      45.56,
+      51.919999999999995
+    ],
+    "report_name": "The efficiency is 0.5802"
+  },
+  {
+    "attenuation_percent": 14.14,
+    "attenuation_scale": 72,
+    "coincidence_rate": 490.6,
+    "peak_to_peak": [
+      44.12,
+      41.94000000000002,
+      43.96000000000001,
+      53.21999999999998
+    ],
+    "report_name": "The efficiency is 0.49060000000000004"
+  },
+  {
+    "attenuation_percent": 13.78,
+    "attenuation_scale": 73,
+    "coincidence_rate": 428.9999999999999,
+    "peak_to_peak": [
+      42.199999999999996,
+      40.660000000000004,
+      42.54,
+      53.58
+    ],
+    "report_name": "The efficiency is 0.4289999999999999"
+  },
+  {
+    "attenuation_percent": 13.42,
+    "attenuation_scale": 74,
+    "coincidence_rate": 362.1000000000001,
+    "peak_to_peak": [
+      43.74,
+      38.72,
+      43.12,
+      53.240000000000016
+    ],
+    "report_name": "The efficiency is 0.3621000000000001"
+  },
+  {
+    "attenuation_percent": 13.08,
+    "attenuation_scale": 75,
+    "coincidence_rate": 291.0,
+    "peak_to_peak": [
+      41.05999999999999,
+      37.69999999999999,
+      44.099999999999994,
+      49.52000000000001
+    ],
+    "report_name": "The efficiency is 0.291"
+  },
+  {
+    "attenuation_percent": 12.74,
+    "attenuation_scale": 76,
+    "coincidence_rate": 220.0,
+    "peak_to_peak": [
+      41.48000000000001,
+      38.58,
+      43.20000000000001,
+      52.76
+    ],
+    "report_name": "The efficiency is 0.22"
+  },
+  {
+    "attenuation_percent": 12.41,
+    "attenuation_scale": 77,
+    "coincidence_rate": 208.00000000000003,
+    "peak_to_peak": [
+      42.18,
+      37.81999999999998,
+      43.28,
+      48.7
+    ],
+    "report_name": "The efficiency is 0.20800000000000002"
+  },
+  {
+    "attenuation_percent": 12.1,
+    "attenuation_scale": 78,
+    "coincidence_rate": 139.00000000000003,
+    "peak_to_peak": [
+      41.18000000000001,
+      37.519999999999996,
+      42.480000000000004,
+      50.32000000000001
+    ],
+    "report_name": "The efficiency is 0.13900000000000004"
+  },
+  {
+    "attenuation_percent": 11.79,
+    "attenuation_scale": 79,
+    "coincidence_rate": 142.00000000000003,
+    "peak_to_peak": [
+      39.37999999999999,
+      39.34000000000001,
+      41.019999999999996,
+      51.10000000000001
+    ],
+    "report_name": "The efficiency is 0.14200000000000002"
+  },
+  {
+    "attenuation_percent": 11.48,
+    "attenuation_scale": 80,
+    "coincidence_rate": 90.39999999999999,
+    "peak_to_peak": [
+      39.5,
+      36.900000000000006,
+      41.440000000000005,
+      50.42
+    ],
+    "report_name": "The efficiency is 0.0904"
+  },
+  {
+    "attenuation_percent": 11.19,
+    "attenuation_scale": 81,
+    "coincidence_rate": 72.00000000000001,
+    "peak_to_peak": [
+      39.35999999999999,
+      38.53999999999999,
+      39.440000000000005,
+      49.18
+    ],
+    "report_name": "The efficiency is 0.07200000000000001"
+  },
+  {
+    "attenuation_percent": 10.9,
+    "attenuation_scale": 82,
+    "coincidence_rate": 61.29999999999999,
+    "peak_to_peak": [
+      44.52000000000001,
+      36.46,
+      43.0,
+      48.220000000000006
+    ],
+    "report_name": "The efficiency is 0.06129999999999999"
+  },
+  {
+    "attenuation_percent": 10.62,
+    "attenuation_scale": 83,
+    "coincidence_rate": 40.60000000000001,
+    "peak_to_peak": [
+      37.62,
+      37.959999999999994,
+      39.65999999999999,
+      49.56000000000003
+    ],
+    "report_name": "The efficiency is 0.04060000000000001"
+  },
+  {
+    "attenuation_percent": 10.35,
+    "attenuation_scale": 84,
+    "coincidence_rate": 33.0,
+    "peak_to_peak": [
+      39.620000000000005,
+      35.64000000000001,
+      39.81999999999999,
+      47.81999999999999
+    ],
+    "report_name": "The efficiency is 0.033"
+  },
+  {
+    "attenuation_percent": 10.08,
+    "attenuation_scale": 85,
+    "coincidence_rate": 23.000000000000004,
+    "peak_to_peak": [
+      40.4,
+      35.52000000000001,
+      40.86,
+      47.94
+    ],
+    "report_name": "The efficiency is 0.023000000000000003"
+  },
+  {
+    "attenuation_percent": 9.82,
+    "attenuation_scale": 86,
+    "coincidence_rate": 18.8,
+    "peak_to_peak": [
+      38.559999999999995,
+      36.53999999999999,
+      39.07999999999999,
+      48.11999999999999
+    ],
+    "report_name": "The efficiency is 0.0188"
+  },
+  {
+    "attenuation_percent": 9.57,
+    "attenuation_scale": 87,
+    "coincidence_rate": 7.999999999999999,
+    "peak_to_peak": [
+      39.720000000000006,
+      35.57999999999999,
+      40.419999999999995,
+      47.51999999999999
+    ],
+    "report_name": "The efficiency is 0.007999999999999998"
+  },
+  {
+    "attenuation_percent": 9.33,
+    "attenuation_scale": 88,
+    "coincidence_rate": 10.999999999999998,
+    "peak_to_peak": [
+      43.679999999999986,
+      36.31999999999999,
+      38.15999999999999,
+      46.04000000000001
+    ],
+    "report_name": "The efficiency is 0.010999999999999998"
+  },
+  {
+    "attenuation_percent": 9.09,
+    "attenuation_scale": 89,
+    "coincidence_rate": 9.000000000000002,
+    "peak_to_peak": [
+      37.36,
+      35.779999999999994,
+      40.98000000000002,
+      46.519999999999996
+    ],
+    "report_name": "The efficiency is 0.009000000000000001"
+  },
+  {
+    "attenuation_percent": 8.85,
+    "attenuation_scale": 90,
+    "coincidence_rate": 7.000000000000001,
+    "peak_to_peak": [
+      39.94000000000002,
+      34.55999999999999,
+      39.11999999999999,
+      45.019999999999996
+    ],
+    "report_name": "The efficiency is 0.007000000000000001"
+  },
+  {
+    "attenuation_percent": 8.63,
+    "attenuation_scale": 91,
+    "coincidence_rate": 5.0,
+    "peak_to_peak": [
+      37.68000000000001,
+      33.97999999999998,
+      39.480000000000004,
+      46.36000000000001
+    ],
+    "report_name": "The efficiency is 0.005"
+  },
+  {
+    "attenuation_percent": 8.41,
+    "attenuation_scale": 92,
+    "coincidence_rate": 2.7000000000000006,
+    "peak_to_peak": [
+      42.419999999999995,
+      35.92,
+      39.64,
+      44.12000000000001
+    ],
+    "report_name": "The efficiency is 0.0027000000000000006"
+  },
+  {
+    "attenuation_percent": 8.19,
+    "attenuation_scale": 93,
+    "coincidence_rate": 1.9999999999999998,
+    "peak_to_peak": [
+      39.279999999999994,
+      36.85999999999999,
+      40.12,
+      47.18000000000002
+    ],
+    "report_name": "The efficiency is 0.0019999999999999996"
+  },
+  {
+    "attenuation_percent": 7.98,
+    "attenuation_scale": 94,
+    "coincidence_rate": 2.9999999999999996,
+    "peak_to_peak": [
+      39.35999999999999,
+      48.41999999999998,
+      38.09999999999999,
+      40.960000000000015
+    ],
+    "report_name": "The efficiency is 0.0029999999999999996"
+  },
+  {
+    "attenuation_percent": 7.77,
+    "attenuation_scale": 95,
+    "coincidence_rate": 2.9999999999999996,
+    "peak_to_peak": [
+      42.860000000000014,
+      35.36,
+      36.99999999999999,
+      45.85999999999999
+    ],
+    "report_name": "The efficiency is 0.0029999999999999996"
+  },
+  {
+    "attenuation_percent": 7.58,
+    "attenuation_scale": 96,
+    "coincidence_rate": 1.6000000000000003,
+    "peak_to_peak": [
+      38.02000000000001,
+      35.41999999999997,
+      39.69999999999996,
+      42.27999999999998
+    ],
+    "report_name": "The efficiency is 0.0016000000000000003"
+  },
+  {
+    "attenuation_percent": 7.38,
+    "attenuation_scale": 97,
+    "coincidence_rate": 0.9999999999999999,
+    "peak_to_peak": [
+      37.92,
+      34.500000000000014,
+      39.94,
+      39.24
+    ],
+    "report_name": "The efficiency is 0.0009999999999999998"
+  },
+  {
+    "attenuation_percent": 7.19,
+    "attenuation_scale": 98,
+    "coincidence_rate": 2.9999999999999996,
+    "peak_to_peak": [
+      36.59999999999999,
+      34.14,
+      39.980000000000004,
+      44.48
+    ],
+    "report_name": "The efficiency is 0.0029999999999999996"
+  },
+  {
+    "attenuation_percent": 7.01,
+    "attenuation_scale": 99,
+    "coincidence_rate": 1.4,
+    "peak_to_peak": [
+      38.18000000000001,
+      34.10000000000001,
+      38.56,
+      43.459999999999994
+    ],
+    "report_name": "The efficiency is 0.0014"
+  },
+  {
+    "attenuation_percent": 6.83,
+    "attenuation_scale": 100,
+    "coincidence_rate": 0.0,
+    "peak_to_peak": [
+      36.45999999999999,
+      35.95999999999999,
+      40.02000000000001,
+      43.72000000000001
+    ],
+    "report_name": "The efficiency is 0.0"
+  }
+]
