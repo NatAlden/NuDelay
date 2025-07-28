@@ -1,15 +1,32 @@
 import time
 import serial
 import socket
+import json
+from pathlib import Path
 import numpy as np
 from typing import List
 from attenuation_control import apply_attenuation_to_all_channels
 
+
+# === opening angles and delays ===
+
+json_path = Path("delay_presets_pulser_drop_30_150_less.json")
+
+with json_path.open() as f:
+    data = json.load(f)
+
+angles = np.array(data["angles"])     # shape (N,)
+delays = np.array(data["delays"])     # shape (N, 4)
+
+# quick sanity check
+print("Loaded", len(angles), "angles, delays shape:", delays.shape)
+
+
 # === Parameters ===
-in_angles = np.arange(-33,23.1, 1)  # degrees
+in_angles = angles  # degrees
 attenuation_codes = np.arange(40, 105, 2)  # DAC values for attenuation (0–127)
 calibration_delays = [5.35, 0, 5.3, 6.35]  # per-channel fixed delay offsets (ns)
-cable_delays = [14.205, 9.492, 4.369, 0.00]  # ns
+#cable_delays = [14.205, 9.492, 4.369, 0.00]  # ns
 
 # === Channel/serial setup ===
 CHANNEL_MAP = {"C1": "A", "C2": "B", "C3": "C", "C4": "D"}
@@ -63,13 +80,8 @@ def apply_delay_preset(delays_ns: List[float]) -> None:
 
 # === Precompute all delay sets ===
 delay_list = []
-for angle in in_angles:
-    delays = angle_delay_time(n_ice, vertical_seperation, c, angle)
-    step_delay = abs(delays)
-    base_delays = [round(i * step_delay, 2) for i in range(4)]
-    if delays < 0:
-        base_delays = base_delays[::-1]
-    delays_ns = [base_delays[i] + calibration_delays[i] + cable_delays[i] for i in range(4)]
+for delay in delays:
+    delays_ns = [delay[i] + calibration_delays[i]  for i in range(4)]
     delay_list.append(delays_ns)
 
 # === Main loop ===

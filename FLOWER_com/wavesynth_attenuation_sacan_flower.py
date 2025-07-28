@@ -7,7 +7,7 @@ FLOWER_IP = '10.42.1.228'  # Replace with actual IP of FLOWER board
 PORT = 9000
 
 #attenuations= np.append(np.arange(0,15,0.1) ,np.arange(15,100.01,0.5))
-attenuations= np.arange(20,105.01,3)
+attenuations= np.arange(20,85.01,4)
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((FLOWER_IP, PORT))
