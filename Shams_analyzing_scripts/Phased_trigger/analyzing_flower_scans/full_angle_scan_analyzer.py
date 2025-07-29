@@ -71,7 +71,7 @@ beams = [
     45.11838005, 60.0
 ]
 
-plt.plot(angles_list, mid_points, marker='o', markersize=4, linestyle='-', linewidth=1, color='black', alpha=0.7, label='Mid Points of Sigmoid Fits')
+plt.plot(angles_list, mid_points[::-1], marker='o', markersize=4, linestyle='-', linewidth=1, color='black', alpha=0.7, label='Mid Points of Sigmoid Fits')
 for i, beam in enumerate(beams):
     plt.axvline(x=beam, color='green', linestyle=':', linewidth=0.7)
     plt.text(beam, plt.ylim()[1] * 0.985, f'beam {i}', color='green', rotation=90, va='top', ha='right', fontsize=6)
