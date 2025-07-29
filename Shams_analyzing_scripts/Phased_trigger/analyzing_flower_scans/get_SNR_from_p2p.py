@@ -7,10 +7,12 @@ RATE = 1000  # Coincidence rate for normalization
 #RMS = [5.328636610698969, 5.92109679158174, 5.374270756281122, 5.970302973754305]
 #RMS = [5.22822458631876, 5.908401755390233, 5.307190438989281, 5.9405500721252285]
 #RMS = [5.256680058792767, 5.864466459798114, 5.287152033920513, 5.9001626038848345]
-RMS = [5.238772259022641, 5.881591570081945, 5.301073587963318, 5.905511131666297]
+#RMS = [5.256479021631751, 6.042870621281024, 5.30402743242648, 5.9463751013136745]
+RMS = [5.2802359111161845, 5.946562471813204, 5.279512943042054, 5.935232044632074]
+
 
 # Load the data
-with open("getting_SNR_from_p2p_07_18.json", "r") as f:
+with open("getting_SNR_Phased_07_28.json", "r") as f:
     data = json.load(f)
 
 # Extract attenuation_percent and corresponding peak_to_peak values
@@ -56,9 +58,9 @@ plt.plot(fit_x, fit_y, color='blue', linestyle='--', label='Linear Fit through (
 
 plt.xlabel("attenuation %")
 plt.ylabel("p2p SNR (normalized by RMS)")
-plt.title("p2p SNR vs Attenuation Percent High Pass Filtered")
+plt.title("p2p SNR vs Attenuation Percent double High Pass Filtered")
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
-plt.savefig("p2p_SNR_vs_attenuation_fixed_07_18_5deg.png" , dpi=300)
+plt.savefig("getting_SNR_Phased_07_28.png" , dpi=300)
 plt.show()

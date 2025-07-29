@@ -58,9 +58,9 @@ class Waveform:
             self.ampl = 2.0*numpy.fft.rfft(self.voltage)
 
         if self.n % 2 == 0:
-            self.freq = numpy.linspace(0, 1 / (2. * self.dt), (self.n / 2) + 1)
+            self.freq = numpy.linspace(0, 1 / (2. * self.dt), int(self.n / 2) + 1)
         else:
-            self.freq = numpy.linspace(0,  (self.n - 1.) / (2. * self.dt * self.n), (self.n + 1) / 2)
+            self.freq = numpy.linspace(0,  (self.n - 1.) / (2. * self.dt * self.n), int((self.n + 1) / 2))
 
         self.df = self.freq[1]-self.freq[0]
         
@@ -137,7 +137,8 @@ class Waveform:
 
 
 if __name__=="__main__":
-    import tools.myplot
+    
+    import myplot
     import matplotlib.pyplot as plt
     
     v= numpy.loadtxt('test_data/impulse_upsampled.txt')
@@ -165,5 +166,5 @@ if __name__=="__main__":
     #plt.plot(impulse.time, numpy.correlate(impulse.voltage, impulse.voltage, "same"))
 
     plt.show()
-    
+
 

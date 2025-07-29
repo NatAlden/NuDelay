@@ -6,10 +6,10 @@ from scipy.optimize import curve_fit
 
 
 # Constants
-SNR_slope = 0.2987923898864614  # Slope for SNR calculation
+SNR_slope = 0.23885127658674019  # Slope for SNR calculation
 
 # Load data
-json_path = Path("phased_full_detailed_scan_07_19_2filters.json")
+json_path = Path("phased_full_scan_07_28_pulser_drop_30m_150d.json")
 with json_path.open() as f:
     data = json.load(f)
 
@@ -78,7 +78,18 @@ for i, beam in enumerate(beams):
 plt.xlabel("Angle (degrees)")
 plt.legend( loc='upper left', fontsize=8)
 plt.ylabel("SNR at 50% Efficiency")
-plt.title("SNR at 50% Efficiency vs Angle phased trigger full scan (both filters)_wrong_slope")
+plt.title("SNR at 50% Efficiency vs Angle phased trigger full scan pulser drop_30_150")
 #plt.grid(True)
 plt.tight_layout()
-plt.savefig("50%_SNR_efficiency_vs_angle_full_scan_phased_array_2filters_wrong_slope.png", dpi=300)
+plt.savefig("50%_SNR_phased_full_pulser_drop_30_150.png", dpi=300)
+
+
+"""
+"""
+output_data = {
+    "angles_list": angles_list,
+    "mid_points": mid_points
+}
+
+with open("patt_phased_array_scan_pulser_drop_30_150.json", "w") as f:
+    json.dump(output_data, f, indent=4)

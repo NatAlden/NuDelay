@@ -17,9 +17,9 @@ FREQ_MAX_GHZ    = 1             # ← adjust to zoom
 
 Cutoff_Freq_GHz = 0.00 # High-pass filter cutoff frequency, if needed
 event_idx = 90  # Change this index to select a different event
-xlim_1, xlim_2 = 210, 290  # X-axis limits for the plot
+xlim_1, xlim_2 = 400, 450  # X-axis limits for the plot
 
-JSON_FILE       = Path("time_delay_test_20deg_18.json")
+JSON_FILE       = Path("alignment_test_0deg_07_23_0point.json")
 # ---------- 1. load JSON deep-chain data ----------------------------------
 
 # Load JSON data

@@ -2,6 +2,7 @@
 import json, numpy as np, matplotlib.pyplot as plt
 from pathlib import Path
 import tools.waveform as waveform
+print(f"waveform module loaded from: {waveform.__file__}")
 import vpol_txrx as rxtx
 from impulse_response import make_avg_wf
 
@@ -17,7 +18,7 @@ FREQ_MAX_GHZ    = 1             # ← adjust to zoom
 
 Cutoff_Freq_GHz = 0.00 # High-pass filter cutoff frequency, if needed
 
-JSON_FILE       = Path("shams_phased_2filters_test.json")
+JSON_FILE       = Path("alignment_test_0deg_07_23_0point.json")
 
 # -------------------------------------------------------------------------
 def make_avg_wf(wave_list, upsamp=UPSAMPLE_FACTOR, method='cor'):
@@ -133,7 +134,6 @@ plt.title("Averaged Waveforms and Window Function")
 plt.legend(fontsize=8, loc='upper right')
 plt.xlim(350, 550)  # Adjust x-axis limit as needed
 plt.tight_layout()
-plt.savefig('Phased_array_trigger_tests_2filters_5deg.png', dpi=300)
-
+plt.savefig('alignment_test_0deg_07_23_0point.png', dpi=300)
 
 
