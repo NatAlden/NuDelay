@@ -6,10 +6,10 @@ from scipy.optimize import curve_fit
 
 
 # Constants
-SNR_slope =0.2977818184056914  # Slope for SNR calculation
+SNR_slope =0.23885127658674019  # Slope for SNR calculation
 
 # Load data
-json_path = Path("fine_scan_all_angles_07_16.json")
+json_path = Path("60_-60deg_pulser_drop_Hi_Lo_30_150.json")
 with json_path.open() as f:
     data = json.load(f)
 
@@ -62,13 +62,23 @@ for angle, values in angle_data.items():
     ax.legend()
     plt.tight_layout()
     filename = f"efficiency_vs_SNR_angle_{int(angle):+03d}.png"
-    plt.savefig(filename, dpi=300)
+    #plt.savefig(filename, dpi=300)
     plt.close()
 
 plt.plot(angles_list, mid_points, marker='o', linestyle='-', color='b')
 plt.xlabel("Angle (degrees)")
 plt.ylabel("SNR at 50% Efficiency")
-plt.title("SNR at 50% Efficiency vs Angle")
+plt.title("SNR at 50% Efficiency vs Angle _ Pulser Drop 30_150")
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("SNR_at_50_percent_efficiency_vs_angle_finest_full_scan.png", dpi=300)
+plt.savefig("50_eff_full_pulser_drop_scan_30_150.png", dpi=300)
+
+"""
+"""
+output_data = {
+    "angles_list": angles_list,
+    "mid_points": mid_points
+}
+
+with open("patt_HiLo_scan_pulser_drop_30_150.json", "w") as f:
+    json.dump(output_data, f, indent=4)
