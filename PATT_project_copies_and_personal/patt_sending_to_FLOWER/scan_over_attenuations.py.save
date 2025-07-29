@@ -1,0 +1,13 @@
+import socket
+import numpy as np
+import time
+from attenuation_control import apply_attenuation_to_all_channels
+
+apply_attenuation_to_all_channels(0)
+apply_attenuation_to_all_channelstime.sleep(3)
+
+apply_attenuation_to_all_channels(50)
+
+
+apply_attenuation_to_all_channels(127)
+

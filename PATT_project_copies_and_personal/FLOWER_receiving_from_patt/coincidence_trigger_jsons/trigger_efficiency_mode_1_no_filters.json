@@ -1,0 +1,650 @@
+[
+  {
+    "attenuation_percent": 56.23413251903491,
+    "attenuation_scale": 20,
+    "coincidence_rate": 1005.2000000000002,
+    "report_name": "The efficiency is 1.0052"
+  },
+  {
+    "attenuation_percent": 54.63865498818542,
+    "attenuation_scale": 21,
+    "coincidence_rate": 1001.0000000000001,
+    "report_name": "The efficiency is 1.0010000000000001"
+  },
+  {
+    "attenuation_percent": 53.088444423098835,
+    "attenuation_scale": 22,
+    "coincidence_rate": 1001.5000000000002,
+    "report_name": "The efficiency is 1.0015000000000003"
+  },
+  {
+    "attenuation_percent": 51.58221650723057,
+    "attenuation_scale": 23,
+    "coincidence_rate": 1002.0000000000002,
+    "report_name": "The efficiency is 1.0020000000000002"
+  },
+  {
+    "attenuation_percent": 50.11872336272722,
+    "attenuation_scale": 24,
+    "coincidence_rate": 1001.0000000000001,
+    "report_name": "The efficiency is 1.0010000000000001"
+  },
+  {
+    "attenuation_percent": 48.69675251658631,
+    "attenuation_scale": 25,
+    "coincidence_rate": 1001.0000000000001,
+    "report_name": "The efficiency is 1.0010000000000001"
+  },
+  {
+    "attenuation_percent": 47.31512589614805,
+    "attenuation_scale": 26,
+    "coincidence_rate": 1000.0,
+    "report_name": "The efficiency is 1.0"
+  },
+  {
+    "attenuation_percent": 45.972698853087216,
+    "attenuation_scale": 27,
+    "coincidence_rate": 1001.0000000000001,
+    "report_name": "The efficiency is 1.0010000000000001"
+  },
+  {
+    "attenuation_percent": 44.66835921509632,
+    "attenuation_scale": 28,
+    "coincidence_rate": 1000.0,
+    "report_name": "The efficiency is 1.0"
+  },
+  {
+    "attenuation_percent": 43.40102636447438,
+    "attenuation_scale": 29,
+    "coincidence_rate": 1001.5000000000002,
+    "report_name": "The efficiency is 1.0015000000000003"
+  },
+  {
+    "attenuation_percent": 42.16965034285822,
+    "attenuation_scale": 30,
+    "coincidence_rate": 1001.0000000000001,
+    "report_name": "The efficiency is 1.0010000000000001"
+  },
+  {
+    "attenuation_percent": 40.97321098135415,
+    "attenuation_scale": 31,
+    "coincidence_rate": 1000.8,
+    "report_name": "The efficiency is 1.0008"
+  },
+  {
+    "attenuation_percent": 39.81071705534972,
+    "attenuation_scale": 32,
+    "coincidence_rate": 1001.0000000000001,
+    "report_name": "The efficiency is 1.0010000000000001"
+  },
+  {
+    "attenuation_percent": 38.68120546330522,
+    "attenuation_scale": 33,
+    "coincidence_rate": 1000.0,
+    "report_name": "The efficiency is 1.0"
+  },
+  {
+    "attenuation_percent": 37.58374042884442,
+    "attenuation_scale": 34,
+    "coincidence_rate": 1000.4000000000001,
+    "report_name": "The efficiency is 1.0004000000000002"
+  },
+  {
+    "attenuation_percent": 36.51741272548377,
+    "attenuation_scale": 35,
+    "coincidence_rate": 1002.9999999999998,
+    "report_name": "The efficiency is 1.0029999999999997"
+  },
+  {
+    "attenuation_percent": 35.48133892335755,
+    "attenuation_scale": 36,
+    "coincidence_rate": 1001.0000000000002,
+    "report_name": "The efficiency is 1.0010000000000003"
+  },
+  {
+    "attenuation_percent": 34.474660657314935,
+    "attenuation_scale": 37,
+    "coincidence_rate": 1000.0,
+    "report_name": "The efficiency is 1.0"
+  },
+  {
+    "attenuation_percent": 33.496543915782766,
+    "attenuation_scale": 38,
+    "coincidence_rate": 1000.0,
+    "report_name": "The efficiency is 1.0"
+  },
+  {
+    "attenuation_percent": 32.54617834980459,
+    "attenuation_scale": 39,
+    "coincidence_rate": 1000.0,
+    "report_name": "The efficiency is 1.0"
+  },
+  {
+    "attenuation_percent": 31.622776601683793,
+    "attenuation_scale": 40,
+    "coincidence_rate": 1002.9999999999998,
+    "report_name": "The efficiency is 1.0029999999999997"
+  },
+  {
+    "attenuation_percent": 30.72557365267447,
+    "attenuation_scale": 41,
+    "coincidence_rate": 1000.3000000000001,
+    "report_name": "The efficiency is 1.0003"
+  },
+  {
+    "attenuation_percent": 29.853826189179593,
+    "attenuation_scale": 42,
+    "coincidence_rate": 1001.0000000000001,
+    "report_name": "The efficiency is 1.0010000000000001"
+  },
+  {
+    "attenuation_percent": 29.00681198693154,
+    "attenuation_scale": 43,
+    "coincidence_rate": 1002.0000000000002,
+    "report_name": "The efficiency is 1.0020000000000002"
+  },
+  {
+    "attenuation_percent": 28.183829312644537,
+    "attenuation_scale": 44,
+    "coincidence_rate": 1001.0000000000001,
+    "report_name": "The efficiency is 1.0010000000000001"
+  },
+  {
+    "attenuation_percent": 27.384196342643612,
+    "attenuation_scale": 45,
+    "coincidence_rate": 1000.1,
+    "report_name": "The efficiency is 1.0001"
+  },
+  {
+    "attenuation_percent": 26.6072505979881,
+    "attenuation_scale": 46,
+    "coincidence_rate": 1001.0000000000001,
+    "report_name": "The efficiency is 1.0010000000000001"
+  },
+  {
+    "attenuation_percent": 25.852348395621906,
+    "attenuation_scale": 47,
+    "coincidence_rate": 1002.0000000000002,
+    "report_name": "The efficiency is 1.0020000000000002"
+  },
+  {
+    "attenuation_percent": 25.118864315095802,
+    "attenuation_scale": 48,
+    "coincidence_rate": 1002.0999999999999,
+    "report_name": "The efficiency is 1.0021"
+  },
+  {
+    "attenuation_percent": 24.4061906804198,
+    "attenuation_scale": 49,
+    "coincidence_rate": 1000.0,
+    "report_name": "The efficiency is 1.0"
+  },
+  {
+    "attenuation_percent": 23.71373705661655,
+    "attenuation_scale": 50,
+    "coincidence_rate": 1000.4,
+    "report_name": "The efficiency is 1.0004"
+  },
+  {
+    "attenuation_percent": 23.04092976055846,
+    "attenuation_scale": 51,
+    "coincidence_rate": 1000.0,
+    "report_name": "The efficiency is 1.0"
+  },
+  {
+    "attenuation_percent": 22.387211385683393,
+    "attenuation_scale": 52,
+    "coincidence_rate": 1001.0000000000001,
+    "report_name": "The efficiency is 1.0010000000000001"
+  },
+  {
+    "attenuation_percent": 21.75204034019523,
+    "attenuation_scale": 53,
+    "coincidence_rate": 1001.0000000000001,
+    "report_name": "The efficiency is 1.0010000000000001"
+  },
+  {
+    "attenuation_percent": 21.134890398366466,
+    "attenuation_scale": 54,
+    "coincidence_rate": 1001.0000000000001,
+    "report_name": "The efficiency is 1.0010000000000001"
+  },
+  {
+    "attenuation_percent": 20.535250264571463,
+    "attenuation_scale": 55,
+    "coincidence_rate": 1000.0,
+    "report_name": "The efficiency is 1.0"
+  },
+  {
+    "attenuation_percent": 19.952623149688797,
+    "attenuation_scale": 56,
+    "coincidence_rate": 1000.0,
+    "report_name": "The efficiency is 1.0"
+  },
+  {
+    "attenuation_percent": 19.386526359522072,
+    "attenuation_scale": 57,
+    "coincidence_rate": 1000.0,
+    "report_name": "The efficiency is 1.0"
+  },
+  {
+    "attenuation_percent": 18.836490894898006,
+    "attenuation_scale": 58,
+    "coincidence_rate": 998.9999999999999,
+    "report_name": "The efficiency is 0.9989999999999999"
+  },
+  {
+    "attenuation_percent": 18.302061063110557,
+    "attenuation_scale": 59,
+    "coincidence_rate": 997.1000000000001,
+    "report_name": "The efficiency is 0.9971000000000001"
+  },
+  {
+    "attenuation_percent": 17.78279410038923,
+    "attenuation_scale": 60,
+    "coincidence_rate": 985.2,
+    "report_name": "The efficiency is 0.9852000000000001"
+  },
+  {
+    "attenuation_percent": 17.278259805078637,
+    "attenuation_scale": 61,
+    "coincidence_rate": 982.9999999999998,
+    "report_name": "The efficiency is 0.9829999999999998"
+  },
+  {
+    "attenuation_percent": 16.788040181225604,
+    "attenuation_scale": 62,
+    "coincidence_rate": 969.4,
+    "report_name": "The efficiency is 0.9693999999999999"
+  },
+  {
+    "attenuation_percent": 16.311729092278384,
+    "attenuation_scale": 63,
+    "coincidence_rate": 953.9999999999999,
+    "report_name": "The efficiency is 0.9539999999999998"
+  },
+  {
+    "attenuation_percent": 15.848931924611135,
+    "attenuation_scale": 64,
+    "coincidence_rate": 931.6000000000001,
+    "report_name": "The efficiency is 0.9316000000000001"
+  },
+  {
+    "attenuation_percent": 15.39926526059492,
+    "attenuation_scale": 65,
+    "coincidence_rate": 897.0000000000002,
+    "report_name": "The efficiency is 0.8970000000000002"
+  },
+  {
+    "attenuation_percent": 14.962356560944334,
+    "attenuation_scale": 66,
+    "coincidence_rate": 862.0000000000002,
+    "report_name": "The efficiency is 0.8620000000000002"
+  },
+  {
+    "attenuation_percent": 14.537843856076618,
+    "attenuation_scale": 67,
+    "coincidence_rate": 820.4,
+    "report_name": "The efficiency is 0.8204"
+  },
+  {
+    "attenuation_percent": 14.125375446227546,
+    "attenuation_scale": 68,
+    "coincidence_rate": 721.0000000000001,
+    "report_name": "The efficiency is 0.7210000000000001"
+  },
+  {
+    "attenuation_percent": 13.72460961007562,
+    "attenuation_scale": 69,
+    "coincidence_rate": 679.2,
+    "report_name": "The efficiency is 0.6792"
+  },
+  {
+    "attenuation_percent": 13.33521432163324,
+    "attenuation_scale": 70,
+    "coincidence_rate": 593.9999999999999,
+    "report_name": "The efficiency is 0.5939999999999999"
+  },
+  {
+    "attenuation_percent": 12.956866975170195,
+    "attenuation_scale": 71,
+    "coincidence_rate": 534.8000000000001,
+    "report_name": "The efficiency is 0.5348"
+  },
+  {
+    "attenuation_percent": 12.589254117941673,
+    "attenuation_scale": 72,
+    "coincidence_rate": 433.00000000000006,
+    "report_name": "The efficiency is 0.43300000000000005"
+  },
+  {
+    "attenuation_percent": 12.232071190499315,
+    "attenuation_scale": 73,
+    "coincidence_rate": 401.99999999999994,
+    "report_name": "The efficiency is 0.40199999999999997"
+  },
+  {
+    "attenuation_percent": 11.885022274370183,
+    "attenuation_scale": 74,
+    "coincidence_rate": 315.40000000000003,
+    "report_name": "The efficiency is 0.3154"
+  },
+  {
+    "attenuation_percent": 11.547819846894582,
+    "attenuation_scale": 75,
+    "coincidence_rate": 274.0,
+    "report_name": "The efficiency is 0.274"
+  },
+  {
+    "attenuation_percent": 11.220184543019636,
+    "attenuation_scale": 76,
+    "coincidence_rate": 207.00000000000003,
+    "report_name": "The efficiency is 0.20700000000000002"
+  },
+  {
+    "attenuation_percent": 10.901844923851275,
+    "attenuation_scale": 77,
+    "coincidence_rate": 171.99999999999997,
+    "report_name": "The efficiency is 0.17199999999999996"
+  },
+  {
+    "attenuation_percent": 10.592537251772889,
+    "attenuation_scale": 78,
+    "coincidence_rate": 118.19999999999997,
+    "report_name": "The efficiency is 0.11819999999999997"
+  },
+  {
+    "attenuation_percent": 10.29200527194428,
+    "attenuation_scale": 79,
+    "coincidence_rate": 110.99999999999997,
+    "report_name": "The efficiency is 0.11099999999999997"
+  },
+  {
+    "attenuation_percent": 10.0,
+    "attenuation_scale": 80,
+    "coincidence_rate": 85.0,
+    "report_name": "The efficiency is 0.085"
+  },
+  {
+    "attenuation_percent": 9.716279515771063,
+    "attenuation_scale": 81,
+    "coincidence_rate": 70.60000000000001,
+    "report_name": "The efficiency is 0.07060000000000001"
+  },
+  {
+    "attenuation_percent": 9.440608762859236,
+    "attenuation_scale": 82,
+    "coincidence_rate": 48.99999999999999,
+    "report_name": "The efficiency is 0.048999999999999995"
+  },
+  {
+    "attenuation_percent": 9.172759353897794,
+    "attenuation_scale": 83,
+    "coincidence_rate": 25.499999999999996,
+    "report_name": "The efficiency is 0.025499999999999995"
+  },
+  {
+    "attenuation_percent": 8.912509381337456,
+    "attenuation_scale": 84,
+    "coincidence_rate": 30.0,
+    "report_name": "The efficiency is 0.03"
+  },
+  {
+    "attenuation_percent": 8.659643233600653,
+    "attenuation_scale": 85,
+    "coincidence_rate": 16.2,
+    "report_name": "The efficiency is 0.0162"
+  },
+  {
+    "attenuation_percent": 8.413951416451953,
+    "attenuation_scale": 86,
+    "coincidence_rate": 11.999999999999998,
+    "report_name": "The efficiency is 0.011999999999999999"
+  },
+  {
+    "attenuation_percent": 8.1752303794365,
+    "attenuation_scale": 87,
+    "coincidence_rate": 13.000000000000002,
+    "report_name": "The efficiency is 0.013000000000000001"
+  },
+  {
+    "attenuation_percent": 7.943282347242814,
+    "attenuation_scale": 88,
+    "coincidence_rate": 7.600000000000001,
+    "report_name": "The efficiency is 0.007600000000000002"
+  },
+  {
+    "attenuation_percent": 7.7179151558501236,
+    "attenuation_scale": 89,
+    "coincidence_rate": 5.999999999999999,
+    "report_name": "The efficiency is 0.005999999999999999"
+  },
+  {
+    "attenuation_percent": 7.498942093324558,
+    "attenuation_scale": 90,
+    "coincidence_rate": 2.8000000000000007,
+    "report_name": "The efficiency is 0.002800000000000001"
+  },
+  {
+    "attenuation_percent": 7.286181745132278,
+    "attenuation_scale": 91,
+    "coincidence_rate": 1.9999999999999998,
+    "report_name": "The efficiency is 0.0019999999999999996"
+  },
+  {
+    "attenuation_percent": 7.07945784384138,
+    "attenuation_scale": 92,
+    "coincidence_rate": 2.8,
+    "report_name": "The efficiency is 0.0028"
+  },
+  {
+    "attenuation_percent": 6.878599123088075,
+    "attenuation_scale": 93,
+    "coincidence_rate": 0.9999999999999999,
+    "report_name": "The efficiency is 0.0009999999999999998"
+  },
+  {
+    "attenuation_percent": 6.6834391756861455,
+    "attenuation_scale": 94,
+    "coincidence_rate": 2.9999999999999996,
+    "report_name": "The efficiency is 0.0029999999999999996"
+  },
+  {
+    "attenuation_percent": 6.493816315762113,
+    "attenuation_scale": 95,
+    "coincidence_rate": 1.7000000000000002,
+    "report_name": "The efficiency is 0.0017000000000000001"
+  },
+  {
+    "attenuation_percent": 6.309573444801933,
+    "attenuation_scale": 96,
+    "coincidence_rate": 0.9999999999999999,
+    "report_name": "The efficiency is 0.0009999999999999998"
+  },
+  {
+    "attenuation_percent": 6.130557921498209,
+    "attenuation_scale": 97,
+    "coincidence_rate": 1.4000000000000004,
+    "report_name": "The efficiency is 0.0014000000000000004"
+  },
+  {
+    "attenuation_percent": 5.956621435290104,
+    "attenuation_scale": 98,
+    "coincidence_rate": 1.9999999999999998,
+    "report_name": "The efficiency is 0.0019999999999999996"
+  },
+  {
+    "attenuation_percent": 5.787619883491206,
+    "attenuation_scale": 99,
+    "coincidence_rate": 1.7999999999999998,
+    "report_name": "The efficiency is 0.0017999999999999997"
+  },
+  {
+    "attenuation_percent": 5.623413251903491,
+    "attenuation_scale": 100,
+    "coincidence_rate": 2.6999999999999997,
+    "report_name": "The efficiency is 0.0026999999999999997"
+  },
+  {
+    "attenuation_percent": 5.463865498818542,
+    "attenuation_scale": 101,
+    "coincidence_rate": 0.9999999999999999,
+    "report_name": "The efficiency is 0.0009999999999999998"
+  },
+  {
+    "attenuation_percent": 5.308844442309884,
+    "attenuation_scale": 102,
+    "coincidence_rate": 0.6,
+    "report_name": "The efficiency is 0.0006"
+  },
+  {
+    "attenuation_percent": 5.158221650723056,
+    "attenuation_scale": 103,
+    "coincidence_rate": 0.0,
+    "report_name": "The efficiency is 0.0"
+  },
+  {
+    "attenuation_percent": 5.011872336272722,
+    "attenuation_scale": 104,
+    "coincidence_rate": 0.0,
+    "report_name": "The efficiency is 0.0"
+  },
+  {
+    "attenuation_percent": 4.869675251658631,
+    "attenuation_scale": 105,
+    "coincidence_rate": 1.9999999999999998,
+    "report_name": "The efficiency is 0.0019999999999999996"
+  },
+  {
+    "attenuation_percent": 4.731512589614805,
+    "attenuation_scale": 106,
+    "coincidence_rate": 0.9999999999999999,
+    "report_name": "The efficiency is 0.0009999999999999998"
+  },
+  {
+    "attenuation_percent": 4.597269885308722,
+    "attenuation_scale": 107,
+    "coincidence_rate": 0.0,
+    "report_name": "The efficiency is 0.0"
+  },
+  {
+    "attenuation_percent": 4.46683592150963,
+    "attenuation_scale": 108,
+    "coincidence_rate": 0.0,
+    "report_name": "The efficiency is 0.0"
+  },
+  {
+    "attenuation_percent": 4.340102636447438,
+    "attenuation_scale": 109,
+    "coincidence_rate": 0.6,
+    "report_name": "The efficiency is 0.0006"
+  },
+  {
+    "attenuation_percent": 4.216965034285822,
+    "attenuation_scale": 110,
+    "coincidence_rate": 0.0,
+    "report_name": "The efficiency is 0.0"
+  },
+  {
+    "attenuation_percent": 4.097321098135415,
+    "attenuation_scale": 111,
+    "coincidence_rate": 0.0,
+    "report_name": "The efficiency is 0.0"
+  },
+  {
+    "attenuation_percent": 3.9810717055349736,
+    "attenuation_scale": 112,
+    "coincidence_rate": 1.9999999999999998,
+    "report_name": "The efficiency is 0.0019999999999999996"
+  },
+  {
+    "attenuation_percent": 3.868120546330521,
+    "attenuation_scale": 113,
+    "coincidence_rate": 0.0,
+    "report_name": "The efficiency is 0.0"
+  },
+  {
+    "attenuation_percent": 3.7583740428844417,
+    "attenuation_scale": 114,
+    "coincidence_rate": 0.1,
+    "report_name": "The efficiency is 0.0001"
+  },
+  {
+    "attenuation_percent": 3.651741272548377,
+    "attenuation_scale": 115,
+    "coincidence_rate": 1.9999999999999998,
+    "report_name": "The efficiency is 0.0019999999999999996"
+  },
+  {
+    "attenuation_percent": 3.548133892335755,
+    "attenuation_scale": 116,
+    "coincidence_rate": 0.9999999999999999,
+    "report_name": "The efficiency is 0.0009999999999999998"
+  },
+  {
+    "attenuation_percent": 3.4474660657314944,
+    "attenuation_scale": 117,
+    "coincidence_rate": 0.9999999999999999,
+    "report_name": "The efficiency is 0.0009999999999999998"
+  },
+  {
+    "attenuation_percent": 3.3496543915782757,
+    "attenuation_scale": 118,
+    "coincidence_rate": 0.30000000000000004,
+    "report_name": "The efficiency is 0.00030000000000000003"
+  },
+  {
+    "attenuation_percent": 3.254617834980458,
+    "attenuation_scale": 119,
+    "coincidence_rate": 0.0,
+    "report_name": "The efficiency is 0.0"
+  },
+  {
+    "attenuation_percent": 3.162277660168379,
+    "attenuation_scale": 120,
+    "coincidence_rate": 0.9999999999999999,
+    "report_name": "The efficiency is 0.0009999999999999998"
+  },
+  {
+    "attenuation_percent": 3.0725573652674467,
+    "attenuation_scale": 121,
+    "coincidence_rate": 0.9999999999999999,
+    "report_name": "The efficiency is 0.0009999999999999998"
+  },
+  {
+    "attenuation_percent": 2.9853826189179604,
+    "attenuation_scale": 122,
+    "coincidence_rate": 1.9999999999999998,
+    "report_name": "The efficiency is 0.0019999999999999996"
+  },
+  {
+    "attenuation_percent": 2.900681198693153,
+    "attenuation_scale": 123,
+    "coincidence_rate": 0.5,
+    "report_name": "The efficiency is 0.0005"
+  },
+  {
+    "attenuation_percent": 2.8183829312644537,
+    "attenuation_scale": 124,
+    "coincidence_rate": 0.9999999999999999,
+    "report_name": "The efficiency is 0.0009999999999999998"
+  },
+  {
+    "attenuation_percent": 2.7384196342643614,
+    "attenuation_scale": 125,
+    "coincidence_rate": 0.0,
+    "report_name": "The efficiency is 0.0"
+  },
+  {
+    "attenuation_percent": 2.6607250597988097,
+    "attenuation_scale": 126,
+    "coincidence_rate": 1.9999999999999998,
+    "report_name": "The efficiency is 0.0019999999999999996"
+  },
+  {
+    "attenuation_percent": 2.5852348395621916,
+    "attenuation_scale": 127,
+    "coincidence_rate": 1.9999999999999998,
+    "report_name": "The efficiency is 0.0019999999999999996"
+  }
+]

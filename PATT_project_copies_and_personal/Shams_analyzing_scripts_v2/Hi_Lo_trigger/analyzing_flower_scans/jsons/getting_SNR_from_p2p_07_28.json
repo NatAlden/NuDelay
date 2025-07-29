@@ -1,0 +1,244 @@
+[
+  {
+    "attenuation_percent": 56.23413251903491,
+    "attenuation_scale": 20,
+    "peak_to_peak": [
+      138.78,
+      152.18000000000004,
+      140.02,
+      166.26000000000002
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 51.58221650723057,
+    "attenuation_scale": 23,
+    "peak_to_peak": [
+      127.68000000000002,
+      139.14,
+      135.55999999999997,
+      152.73999999999998
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 47.31512589614805,
+    "attenuation_scale": 26,
+    "peak_to_peak": [
+      119.39999999999999,
+      131.68,
+      118.63999999999996,
+      141.56
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 43.40102636447438,
+    "attenuation_scale": 29,
+    "peak_to_peak": [
+      108.51999999999997,
+      122.6,
+      114.72000000000003,
+      129.2
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 39.81071705534972,
+    "attenuation_scale": 32,
+    "peak_to_peak": [
+      97.72,
+      110.99999999999997,
+      101.26000000000002,
+      116.72000000000003
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 36.51741272548377,
+    "attenuation_scale": 35,
+    "peak_to_peak": [
+      91.26,
+      103.22,
+      96.27999999999997,
+      107.08000000000001
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 33.496543915782766,
+    "attenuation_scale": 38,
+    "peak_to_peak": [
+      82.95999999999998,
+      90.06,
+      83.88000000000001,
+      96.72000000000003
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 30.72557365267447,
+    "attenuation_scale": 41,
+    "peak_to_peak": [
+      78.1,
+      86.74,
+      83.3,
+      89.86
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 28.183829312644537,
+    "attenuation_scale": 44,
+    "peak_to_peak": [
+      68.89999999999999,
+      78.22,
+      70.75999999999999,
+      81.84
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 25.852348395621906,
+    "attenuation_scale": 47,
+    "peak_to_peak": [
+      63.66,
+      72.96000000000001,
+      67.99999999999997,
+      77.73999999999998
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 23.71373705661655,
+    "attenuation_scale": 50,
+    "peak_to_peak": [
+      56.8,
+      65.76,
+      60.49999999999999,
+      69.8
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 21.75204034019523,
+    "attenuation_scale": 53,
+    "peak_to_peak": [
+      57.5,
+      60.64000000000001,
+      60.180000000000014,
+      65.46
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 19.952623149688797,
+    "attenuation_scale": 56,
+    "peak_to_peak": [
+      53.760000000000005,
+      58.980000000000004,
+      52.66,
+      62.559999999999995
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 18.302061063110557,
+    "attenuation_scale": 59,
+    "peak_to_peak": [
+      48.54000000000001,
+      53.24,
+      52.39999999999999,
+      58.17999999999999
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 16.788040181225604,
+    "attenuation_scale": 62,
+    "peak_to_peak": [
+      46.24000000000001,
+      53.14000000000001,
+      49.62000000000001,
+      55.49999999999999
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 15.39926526059492,
+    "attenuation_scale": 65,
+    "peak_to_peak": [
+      45.84,
+      51.44,
+      47.30000000000002,
+      50.30000000000001
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 14.125375446227546,
+    "attenuation_scale": 68,
+    "peak_to_peak": [
+      46.02000000000001,
+      50.120000000000005,
+      43.78000000000001,
+      51.82
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 12.956866975170195,
+    "attenuation_scale": 71,
+    "peak_to_peak": [
+      45.16000000000001,
+      48.599999999999994,
+      45.34000000000001,
+      52.379999999999995
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 11.885022274370183,
+    "attenuation_scale": 74,
+    "peak_to_peak": [
+      40.32000000000001,
+      46.879999999999995,
+      41.01999999999999,
+      50.39999999999999
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 10.901844923851275,
+    "attenuation_scale": 77,
+    "peak_to_peak": [
+      42.199999999999996,
+      46.42,
+      40.67999999999999,
+      47.11999999999999
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 10.0,
+    "attenuation_scale": 80,
+    "peak_to_peak": [
+      40.2,
+      46.08,
+      39.179999999999986,
+      49.400000000000006
+    ],
+    "report_name": "The efficiency is "
+  },
+  {
+    "attenuation_percent": 9.172759353897794,
+    "attenuation_scale": 83,
+    "peak_to_peak": [
+      39.160000000000004,
+      52.22,
+      38.26,
+      46.16000000000001
+    ],
+    "report_name": "The efficiency is "
+  }
+]
