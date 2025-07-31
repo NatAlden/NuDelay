@@ -10,7 +10,7 @@ from attenuation_control import apply_attenuation_to_all_channels
 
 # === opening angles and delays ===
 
-json_path = Path("delay_presets_pulser_drop_30_150_less.json")
+json_path = Path("delay_presets_pulser_drop_30_150_full.json")
 
 with json_path.open() as f:
     data = json.load(f)
