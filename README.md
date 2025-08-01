@@ -23,8 +23,8 @@ Welcome to the documentation for the **Phased Array Trigger Tester (PATT)** proj
 
 ## Overview
 
-The PATT project is designed to simulate particle event triggers in a lab by generating fast pulses, delaying and attenuating them as needed, and evaluating trigger performance using a separate receiver unit known as FLOWER. It supports both Hi-Lo and phased array trigger modes and is highly customizable.
-
+The PATT project is designed to simulate particle event triggers in a lab by generating fast pulses, delaying and attenuating them as needed, and evaluating trigger performance using the trigger board known as the FLOWER. It supports both Hi-Lo and phased array trigger modes and is highly customizable.
+Find all [supporting documents](https://drive.google.com/drive/folders/1UzmJD0grvrm_VBW6-bOx_4IYcB0hb6c_?usp=sharing) and useful documentation for operating the FLOWER and the PATT in this Google Drive
 ---
 
 ## PATT System Overview
@@ -44,7 +44,7 @@ External components:
 * A **12V power supply** (draws \~0.9 A)
 * A **function generator** for timing signal generation
 
-See the detailed [PATT Hardware Documentation](./PATT_System_Documentation.md) for power-up steps and safety notes.
+See the detailed [PATT Hardware Documentation](https://docs.google.com/document/d/1k0xs5KYfx7s5R0da7UKOwDlfDsW09W0x/edit?usp=sharing&ouid=101918658015293007442&rtpof=true&sd=true) for power-up steps and safety notes.
 
 ---
 
@@ -74,16 +74,16 @@ To establish communication:
 4. On the PATT: Run `patt_client.py`
 5. If connection fails, check the network and IP configuration.
 
-See [PATT–FLOWER Scan Communication README](./PATT_FLOWER_Scans.md) for detailed instructions.
+See [PATT–FLOWER Scan Communication README](./ON_FLOWER_receiving_from_PATT/README.md) for detailed instructions.
 
 ---
 
 ## Trigger Modes: Hi-Lo and Phased
 
-You can select the desired trigger mode by configuring delay and attenuation scripts on the PATT.
+You can select the desired trigger test mode by configuring delay and attenuation scripts on the PATT.
 
-* **Hi-Lo Trigger**: Sets a delay pattern simulating simple vertical pulses.
-* **Phased Trigger**: Uses beamforming-style delays to mimic incoming angles.
+* **Hi-Lo Trigger**: Sets a delay pattern simulating simple pulses.
+* **Phased Trigger**: Uses more calibration delays, like the cable delay,s to mimic the experiment.
 
 Use scripts such as:
 
@@ -110,7 +110,7 @@ Use the following to calibrate or control pulse parameters:
   * `calibrate_test_attenuations_per_channel.py`
   * `percent_attenuation_control.py`
 
-All scripts are located in `NuDelay/PATT_calibration_setup_scripts/`. See [Delay & Attenuation Scripts README](./Delay_Attenuation_Scripts.md).
+All scripts are located in `NuDelay/PATT_calibration_setup_scripts/`. See [Delay & Attenuation Scripts README](./PATT_calibration_setup_scripts/README.md).
 
 ---
 
@@ -136,7 +136,7 @@ Scans involve two paired scripts:
   * `patt_angle_and_attenuation_scan.py` → `coincidence_scan_angles_and_attenuations.py`
   * Optional custom delay versions available
 
-See [Scan Scripts README](./Scan_Scripts_README.md) for a full list and instructions.
+See [Scan Scripts README](./ON_PATT_controlling_FLOWER/README.md) for a full list and instructions.
 
 ---
 
@@ -151,7 +151,7 @@ Scripts in `NuDelay/Shams_analyzing_scripts/` provide:
 
 RMS noise levels must be calculated with `utils.py` using noise-only traces.
 
-Refer to [Analysis README](./Analysis_README.md) for usage examples.
+Refer to [Analysis README](./Shams_analyzing_scripts/README.md) for usage examples.
 
 ---
 
@@ -178,6 +178,7 @@ Script: `delay_list_v2.py`
 ---
 
 For any issues or contributions, please reach out to the maintainer or submit a pull request.
+Or reach out to  Shams Hassiki via email: shassiki2@unl.edu
 
 ---
 
