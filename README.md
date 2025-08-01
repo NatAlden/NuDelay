@@ -44,7 +44,7 @@ External components:
 * A **12V power supply** (draws \~0.9 A)
 * A **function generator** for timing signal generation
 
-See the detailed [PATT Hardware Documentation](./https://docs.google.com/document/d/1k0xs5KYfx7s5R0da7UKOwDlfDsW09W0x/edit?usp=sharing&ouid=101918658015293007442&rtpof=true&sd=true) for power-up steps and safety notes.
+See the detailed [PATT Hardware Documentation](https://docs.google.com/document/d/1k0xs5KYfx7s5R0da7UKOwDlfDsW09W0x/edit?usp=sharing&ouid=101918658015293007442&rtpof=true&sd=true) for power-up steps and safety notes.
 
 ---
 
