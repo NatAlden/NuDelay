@@ -8,7 +8,7 @@ from attenuation_control import apply_attenuation_to_all_channels
 # === Parameters ===
 in_angles = np.arange(-33,23.1, 1)  # degrees
 attenuation_codes = np.arange(40, 105, 2)  # DAC values for attenuation (0–127)
-calibration_delays = [5.35, 0, 5.3, 6.35]  # per-channel fixed delay offsets (ns)
+calibration_delays = [5.19, 0, 5.21, 6.08]  # per-channel fixed delay offsets (ns)
 cable_delays = [14.205, 9.492, 4.369, 0.00]  # ns
 
 # === Channel/serial setup ===
