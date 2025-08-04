@@ -17,7 +17,7 @@ FREQ_MAX_GHZ    = 1             # ← adjust to zoom
 
 Cutoff_Freq_GHz = 0.00 # High-pass filter cutoff frequency, if needed
 
-JSON_FILE       = Path("alignment_test_0deg_08_04_4rd.json")
+JSON_FILE       = Path("alignment_test_0deg_08_04_7th.json")
 
 # -------------------------------------------------------------------------
 def make_avg_wf(wave_list, upsamp=UPSAMPLE_FACTOR, method='cor'):
@@ -133,7 +133,7 @@ plt.title("Averaged Waveforms and Window Function")
 plt.legend(fontsize=8, loc='upper right')
 plt.xlim(400, 600)  # Adjust x-axis limit as needed
 plt.tight_layout()
-plt.savefig('alignment_test_0deg_08_04.png', dpi=300)
+plt.savefig('alignment_test_0deg_08_04_aligned.png', dpi=300)
 
 
 

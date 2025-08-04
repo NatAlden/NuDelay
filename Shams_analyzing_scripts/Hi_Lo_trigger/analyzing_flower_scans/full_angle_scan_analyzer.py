@@ -9,7 +9,7 @@ from scipy.optimize import curve_fit
 SNR_slope =0.239174046644996  # Slope for SNR calculation
 
 # Load data
-json_path = Path("Full_scan_2Filters_08_01_plane_HiLo.json")
+json_path = Path("section_scan_2Filters_08_04_plane_HiLo_2.json")
 with json_path.open() as f:
     data = json.load(f)
 
@@ -78,7 +78,7 @@ for peak in hilo_peaks:
 #plt.ylim(3.65,4.35)
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("Full_scan_plane_wave_2filters_08_01_zoom.png", dpi=300)
+plt.savefig("section_scan_2Filters_08_04_plane_HiLo_2.png", dpi=300)
 
 """
 """
