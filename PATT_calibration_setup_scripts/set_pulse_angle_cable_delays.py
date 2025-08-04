@@ -6,7 +6,7 @@ import serial
 n_ice = 1.78  # index of refraction in ice
 vertical_seperation = 1  # meters
 c = 299792458  # m/s (speed of light)
-calibration_delays = [5.35, 0, 5.3, 6.35]  # ns
+calibration_delays = [5.19, 0, 5.21, 6.08]  # ns
 cable_delays = [14.06, 9.57, 4.30, 0.00]  # ns
 
 # === Channel Mapping ===
