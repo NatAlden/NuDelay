@@ -6,10 +6,10 @@ from scipy.optimize import curve_fit
 
 
 # Constants
-SNR_slope =0.2969020733843431  # Slope for SNR calculation
+SNR_slope =0.239174046644996  # Slope for SNR calculation
 
 # Load data
-json_path = Path("fine_scan_all_angles_07_16.json")
+json_path = Path("Full_scan_2Filters_08_01_plane_HiLo.json")
 with json_path.open() as f:
     data = json.load(f)
 
@@ -70,15 +70,15 @@ hilo_peaks = [-45.5, -20.9, 0, 20.9, 45.5]
 plt.plot(angles_list, mid_points, marker='o', linestyle='-', color='black')
 plt.xlabel("Angle (degrees)")
 plt.ylabel("SNR at 50% Efficiency")
-plt.title("SNR at 50% Efficiency vs Angle - Hi_Lo Trigger - Plane wave")
+plt.title("SNR at 50% Efficiency vs Angle - Hi_Lo Trigger - Plane wave - Double High Pass Filtered")
 for peak in hilo_peaks:
     plt.axvline(x=peak, color='r', linestyle='--', lw=0.5)
     plt.text(peak-0.5, plt.ylim()[1] * 1.05, f'Angle {peak}°', color='green', rotation=90, va='top', ha='right', fontsize=8)
 
-plt.ylim(3.65,4.35)
+#plt.ylim(3.65,4.35)
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("fine_scan_all_angles_07_16_with_axv_lines.png", dpi=300)
+plt.savefig("Full_scan_plane_wave_2filters_08_01_zoom.png", dpi=300)
 
 """
 """
