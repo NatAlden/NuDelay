@@ -6,10 +6,10 @@ from scipy.optimize import curve_fit
 
 
 # Constants
-SNR_slope =0.2969020733843431  # Slope for SNR calculation
+SNR_slope =0.239174046644996  # Slope for SNR calculation
 
 # Load data
-json_path = Path("fine_scan_all_angles_07_16.json")
+json_path = Path("full_scan_2Filters_08_04_plane_HiLo.json")
 with json_path.open() as f:
     data = json.load(f)
 
@@ -72,8 +72,8 @@ for angle, values in angle_data.items():
 
 hilo_peaks = [-45.5, -20.9, 0, 20.9, 45.5]
 
-plt.plot(angles_list, mid_points, marker='o', linestyle='-', color='black', alpha=0.7, label='Plane Wave Data')
-plt.plot(drop_angles_list, drop_mid_points, marker='o', linestyle='-', color='blue', label='Pulser Drop Data', alpha=0.7)
+plt.plot(angles_list, mid_points, marker='o', linestyle='-', color='black', alpha=0.9, label='Plane Wave Data', lw=2, markersize=3)
+plt.plot(drop_angles_list, drop_mid_points, marker='o', linestyle='-', color='blue', label='Pulser Drop Data', alpha=0.9,lw=2, markersize=3)
 plt.xlabel("Angle (degrees)")
 plt.ylabel("SNR at 50% Efficiency")
 plt.title("SNR at 50% Efficiency vs Angle - Hi_Lo Trigger - Plane wave")
@@ -86,7 +86,7 @@ plt.ylim(3.65,4.35)
 plt.grid(True)
 plt.legend()
 plt.tight_layout()
-plt.savefig("fine_scans_comparative_plot.png", dpi=300)
+plt.savefig("fine_scans_comparative_plot_apples.png", dpi=300)
 
 """
 """
