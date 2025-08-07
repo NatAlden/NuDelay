@@ -17,7 +17,7 @@ FREQ_MAX_GHZ    = 1             # ← adjust to zoom
 
 Cutoff_Freq_GHz = 0.00 # High-pass filter cutoff frequency, if needed
 
-JSON_FILE       = Path("sample_events_plane_20_9deg_60atten_2.json")
+JSON_FILE       = Path("alignment_test_cross_corr.json")
 
 # -------------------------------------------------------------------------
 def make_avg_wf(wave_list, upsamp=UPSAMPLE_FACTOR, method='cor'):
@@ -129,11 +129,11 @@ for ch, wave in enumerate(avg_waves):
 plt.plot(t_axis, window * np.max([np.max(np.abs(w.voltage)) for w in avg_waves]), 'k--', label='Window (scaled)')
 plt.xlabel("Time (ns)")
 plt.ylabel("Voltage (a.u.)")
-plt.title("300 Averaged Waveforms and Window Function")
+plt.title("Averaged Waveforms and Window Function")
 plt.legend(fontsize=8, loc='upper right')
 plt.xlim(400, 600)  # Adjust x-axis limit as needed
 plt.tight_layout()
-plt.savefig('sample_events_plane_20_9deg_60atten_2.png', dpi=300)
+#plt.savefig('0delays-argmax.png', dpi=300)
 
 
 

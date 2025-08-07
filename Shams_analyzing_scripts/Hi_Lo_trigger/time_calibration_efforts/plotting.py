@@ -16,11 +16,11 @@ FREQ_MIN_GHZ    = 0.0               # ← adjust to zoom
 FREQ_MAX_GHZ    = 1             # ← adjust to zoom
 
 Cutoff_Freq_GHz = 0.00 # High-pass filter cutoff frequency, if needed
-event_idx = 1  # Change this index to select a different event
+event_idx = 8  # Change this index to select a different event
 xlim_1, xlim_2 = 470, 580  # X-axis limits for the plot
-ang=20.9
+ang=45.5
 
-JSON_FILE       = Path("sample_events_plane_20_9deg_60atten_2.json")
+JSON_FILE       = Path("sample_test_45_5.json")
 # ---------- 1. load JSON deep-chain data ----------------------------------
 
 # Load JSON data
