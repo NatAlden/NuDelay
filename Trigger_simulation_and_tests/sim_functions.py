@@ -7,6 +7,15 @@ import math
 import os
 import sys
 
+def angle_delay_time(angle ):
+    angle=np.deg2rad(angle)
+    # === Physics ===
+    n_ice= 1.75  #index of refraction in ice
+    vertical_seperation= 1 #distance betwwen channel in meters
+    c= 299792458 #speed of light in a vaccum in m/s
+    
+    time_delays= n_ice * vertical_seperation * np.sin(angle) / c
+    return -time_delays*1e9 # ns  # negative because the pulse is delayed, not advanced and ch3 is closes to surface
 
 def make_band_limited_noise(json_path,
                             channel_key="ch0",
@@ -75,6 +84,8 @@ def make_band_limited_noise(json_path,
     return time_ns, noise_mV
 
 def generate_pulse (pulse_v, pulse_t , STEP, simulation_index_duration, amplitude_scale):
+
+
     start_time= random.uniform(0, STEP)
     start_index= np.argmin(np.where(pulse_t >= start_time)[0])
     pulse_indices= np.linspace(start_index, len(pulse_v)-1, simulation_index_duration, dtype=int)
@@ -85,6 +96,74 @@ def generate_pulse (pulse_v, pulse_t , STEP, simulation_index_duration, amplitud
 
     signal = pulse_v[pulse_indices] * amplitude_scale  # Scale the pulse voltage
     return signal
+"""
+def generate_pulse_at_angle(pulse_voltage, pulse_time, time_step, simulation_duration_samples, amplitude_scale, angle, start_seed, channel_index):
+
+
+  
+    delay_dt = angle_delay_time(angle)
+
+    if delay_dt < 0:
+        delay_ns = 3 * np.abs(delay_dt)  + delay_dt * channel_index
+    else:
+        delay_ns = delay_dt * channel_index
+
+    
+
+    start_time = start_seed + delay_ns
+    start_index = np.argmin(np.where(pulse_time >= start_time)[0])
+    
+
+    return signal
+
+"""
+def generate_pulse_at_angle(
+    pulse_voltage,                 # 1D array of the pulse shape
+    pulse_time,                    # 1D array of times (ns) for pulse_voltage
+    time_step,                     # simulation dt (ns)
+    simulation_duration_samples,   # length of the output signal
+    amplitude_scale,               # scale factor for the pulse
+    angle,                         # beam angle
+    start_seed,                    # base start time (ns)
+    channel_index                  # 0..Nch-1
+):
+    # Channel delay from your rule
+    delay_dt = angle_delay_time(angle)  # ns
+    if delay_dt < 0:
+        delay_ns = 3 * abs(delay_dt) + delay_dt * channel_index
+    else:
+        delay_ns = delay_dt * channel_index
+
+    start_time = start_seed + delay_ns  # ns shift applied to this channel
+
+    # Prepare arrays
+    pv = np.asarray(pulse_voltage)
+    pt = np.asarray(pulse_time)
+    out = np.zeros(int(simulation_duration_samples), dtype=pv.dtype)
+
+    # Simulation times for this run (0..T) in ns
+    sim_t = np.arange(out.size) * time_step
+
+    # What time in the pulse we need to sample for each sim_t
+    src_t = sim_t - start_time
+
+    # Only places where the requested pulse time is within the pulse's support
+    mask = (src_t >= pt[0]) & (src_t <= pt[-1])
+    if not mask.any():
+        return out  # entirely out of range -> all zeros
+
+    # For masked positions, find nearest index in pulse_time
+    st = src_t[mask]
+    idx_right = np.searchsorted(pt, st, side="left")
+    idx_left  = np.clip(idx_right - 1, 0, len(pt) - 1)
+    idx_right = np.clip(idx_right,       0, len(pt) - 1)
+
+    take_right = np.abs(pt[idx_right] - st) <= np.abs(pt[idx_left] - st)
+    idx = np.where(take_right, idx_right, idx_left)
+
+    # Write scaled samples; other positions stay zero
+    out[mask] = pv[idx] * amplitude_scale
+    return out
 
 def digitize_signal(signal, max_signal):
     """
@@ -125,7 +204,7 @@ def plot_4_channels_signals(time_axis, channel_signals, title="4 Channels Signal
     """
     plt.figure(figsize=(12, 6))
     for ch, signal in enumerate(channel_signals):
-        plt.plot(time_axis, signal, label=f'Channel {ch+1}')
+        plt.plot(time_axis, signal, label=f'Channel {ch}')
     
     plt.title(title)
     plt.xlabel('Time (ns)')
@@ -196,3 +275,43 @@ def find_triggers(channel_signals, time_axis, *,            # ← positional, ke
             i += 1
 
     return triggers
+
+
+
+
+def make_full_signal_angle(impulse_json_path, SIMULATION_DURATION_NS, SAMPLING_RATE, NOISE_EQUALIZE,
+                     pulse_voltage, pulse_time, time_step, simulation_duration_samples, amplitude_scale, max_signal, angle, delay_seed, channel_index):
+
+    t, noise=make_band_limited_noise(
+        impulse_json_path,
+        "ch2_2x_amp",
+        window_ns=SIMULATION_DURATION_NS,
+        adc_rate_ghz=SAMPLING_RATE,
+        oversample=1,
+        target_rms_mV=NOISE_EQUALIZE,
+    ) 
+    
+    pulse = generate_pulse_at_angle(pulse_voltage, pulse_time, time_step, simulation_duration_samples, amplitude_scale, angle, delay_seed, channel_index)
+    full_signal = digitize_signal( noise+ pulse, max_signal) 
+    full_signal = full_signal[:simulation_duration_samples]  # Ensure the signal length matches the
+    return t, full_signal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

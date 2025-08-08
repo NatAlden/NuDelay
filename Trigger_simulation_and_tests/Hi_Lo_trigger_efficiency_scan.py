@@ -24,10 +24,10 @@ N_of_channels = 4
 THRESHOLD_V= [18,21,19,21]  # ADC counts
 N_REQ = 2  # Number of channels required for a trigger
 COINC_NS = SIMULATION_DURATION_NS
-SCAN_RATE = 40 
+SCAN_RATE = 200 
 PULSE_AMPLITUDES = np.concatenate([
     np.arange(6, 12, 2),   
-    np.arange(12, 21, 1),  
+    np.arange(12, 21, 0.7),  
     np.arange(22, 36, 2)   
 ])  
 
@@ -97,6 +97,6 @@ plt.xlabel('SNR')
 plt.ylabel('Pass Fraction')
 plt.grid()
 plt.legend()
-plt.savefig("Hi_Lo_trigger_efficiency_scan_flower_thresh.png")
+plt.savefig("Hi_Lo_trigger_efficiency_scan_flower_thresh_200.png")
 
 
