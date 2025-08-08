@@ -1,0 +1,2642 @@
+[
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 40.0,
+    "attenuation_percent": 31.62,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang-10.0_att040.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 42.0,
+    "attenuation_percent": 29.85,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang-10.0_att042.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 44.0,
+    "attenuation_percent": 28.18,
+    "coincidence_rate": 1002.0000000000002,
+    "efficiency": 1.0020000000000002,
+    "run_name": "ang-10.0_att044.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 46.0,
+    "attenuation_percent": 26.61,
+    "coincidence_rate": 1002.9999999999998,
+    "efficiency": 1.0029999999999997,
+    "run_name": "ang-10.0_att046.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 48.0,
+    "attenuation_percent": 25.12,
+    "coincidence_rate": 1001.8000000000002,
+    "efficiency": 1.0018000000000002,
+    "run_name": "ang-10.0_att048.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 50.0,
+    "attenuation_percent": 23.71,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang-10.0_att050.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 52.0,
+    "attenuation_percent": 22.39,
+    "coincidence_rate": 998.5999999999999,
+    "efficiency": 0.9985999999999999,
+    "run_name": "ang-10.0_att052.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 54.0,
+    "attenuation_percent": 21.13,
+    "coincidence_rate": 987.8000000000001,
+    "efficiency": 0.9878000000000001,
+    "run_name": "ang-10.0_att054.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 56.0,
+    "attenuation_percent": 19.95,
+    "coincidence_rate": 942.5999999999999,
+    "efficiency": 0.9425999999999999,
+    "run_name": "ang-10.0_att056.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 58.0,
+    "attenuation_percent": 18.84,
+    "coincidence_rate": 860.3000000000002,
+    "efficiency": 0.8603000000000002,
+    "run_name": "ang-10.0_att058.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 60.0,
+    "attenuation_percent": 17.78,
+    "coincidence_rate": 735.3999999999999,
+    "efficiency": 0.7353999999999998,
+    "run_name": "ang-10.0_att060.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 62.0,
+    "attenuation_percent": 16.79,
+    "coincidence_rate": 581.9,
+    "efficiency": 0.5819,
+    "run_name": "ang-10.0_att062.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 64.0,
+    "attenuation_percent": 15.85,
+    "coincidence_rate": 446.99999999999994,
+    "efficiency": 0.44699999999999995,
+    "run_name": "ang-10.0_att064.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 66.0,
+    "attenuation_percent": 14.96,
+    "coincidence_rate": 276.99999999999994,
+    "efficiency": 0.27699999999999997,
+    "run_name": "ang-10.0_att066.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 68.0,
+    "attenuation_percent": 14.13,
+    "coincidence_rate": 170.0,
+    "efficiency": 0.17,
+    "run_name": "ang-10.0_att068.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 70.0,
+    "attenuation_percent": 13.34,
+    "coincidence_rate": 87.00000000000001,
+    "efficiency": 0.08700000000000001,
+    "run_name": "ang-10.0_att070.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 72.0,
+    "attenuation_percent": 12.59,
+    "coincidence_rate": 43.99999999999999,
+    "efficiency": 0.04399999999999999,
+    "run_name": "ang-10.0_att072.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 74.0,
+    "attenuation_percent": 11.89,
+    "coincidence_rate": 21.999999999999996,
+    "efficiency": 0.021999999999999995,
+    "run_name": "ang-10.0_att074.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 76.0,
+    "attenuation_percent": 11.22,
+    "coincidence_rate": 10.999999999999998,
+    "efficiency": 0.010999999999999998,
+    "run_name": "ang-10.0_att076.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 78.0,
+    "attenuation_percent": 10.59,
+    "coincidence_rate": 13.000000000000002,
+    "efficiency": 0.013000000000000001,
+    "run_name": "ang-10.0_att078.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 80.0,
+    "attenuation_percent": 10.0,
+    "coincidence_rate": 2.8000000000000003,
+    "efficiency": 0.0028000000000000004,
+    "run_name": "ang-10.0_att080.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 82.0,
+    "attenuation_percent": 9.44,
+    "coincidence_rate": 1.2000000000000002,
+    "efficiency": 0.0012000000000000001,
+    "run_name": "ang-10.0_att082.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 84.0,
+    "attenuation_percent": 8.91,
+    "coincidence_rate": 1.4999999999999998,
+    "efficiency": 0.0014999999999999998,
+    "run_name": "ang-10.0_att084.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 86.0,
+    "attenuation_percent": 8.41,
+    "coincidence_rate": 0.4,
+    "efficiency": 0.0004,
+    "run_name": "ang-10.0_att086.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 88.0,
+    "attenuation_percent": 7.94,
+    "coincidence_rate": 0.7999999999999999,
+    "efficiency": 0.0007999999999999999,
+    "run_name": "ang-10.0_att088.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 90.0,
+    "attenuation_percent": 7.5,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-10.0_att090.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 92.0,
+    "attenuation_percent": 7.08,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-10.0_att092.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 94.0,
+    "attenuation_percent": 6.68,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang-10.0_att094.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 96.0,
+    "attenuation_percent": 6.31,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang-10.0_att096.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 98.0,
+    "attenuation_percent": 5.96,
+    "coincidence_rate": 2.9999999999999996,
+    "efficiency": 0.0029999999999999996,
+    "run_name": "ang-10.0_att098.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 100.0,
+    "attenuation_percent": 5.62,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang-10.0_att100.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 102.0,
+    "attenuation_percent": 5.31,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-10.0_att102.00"
+  },
+  {
+    "angle_deg": -10.0,
+    "attenuation_code": 104.0,
+    "attenuation_percent": 5.01,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang-10.0_att104.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 40.0,
+    "attenuation_percent": 31.62,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang-08.0_att040.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 42.0,
+    "attenuation_percent": 29.85,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang-08.0_att042.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 44.0,
+    "attenuation_percent": 28.18,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang-08.0_att044.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 46.0,
+    "attenuation_percent": 26.61,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang-08.0_att046.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 48.0,
+    "attenuation_percent": 25.12,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang-08.0_att048.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 50.0,
+    "attenuation_percent": 23.71,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang-08.0_att050.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 52.0,
+    "attenuation_percent": 22.39,
+    "coincidence_rate": 996.0000000000001,
+    "efficiency": 0.9960000000000001,
+    "run_name": "ang-08.0_att052.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 54.0,
+    "attenuation_percent": 21.13,
+    "coincidence_rate": 982.0000000000002,
+    "efficiency": 0.9820000000000002,
+    "run_name": "ang-08.0_att054.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 56.0,
+    "attenuation_percent": 19.95,
+    "coincidence_rate": 938.9000000000002,
+    "efficiency": 0.9389000000000002,
+    "run_name": "ang-08.0_att056.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 58.0,
+    "attenuation_percent": 18.84,
+    "coincidence_rate": 853.8000000000002,
+    "efficiency": 0.8538000000000002,
+    "run_name": "ang-08.0_att058.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 60.0,
+    "attenuation_percent": 17.78,
+    "coincidence_rate": 731.3,
+    "efficiency": 0.7313,
+    "run_name": "ang-08.0_att060.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 62.0,
+    "attenuation_percent": 16.79,
+    "coincidence_rate": 572.0,
+    "efficiency": 0.572,
+    "run_name": "ang-08.0_att062.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 64.0,
+    "attenuation_percent": 15.85,
+    "coincidence_rate": 420.19999999999993,
+    "efficiency": 0.4201999999999999,
+    "run_name": "ang-08.0_att064.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 66.0,
+    "attenuation_percent": 14.96,
+    "coincidence_rate": 262.7,
+    "efficiency": 0.2627,
+    "run_name": "ang-08.0_att066.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 68.0,
+    "attenuation_percent": 14.13,
+    "coincidence_rate": 168.79999999999998,
+    "efficiency": 0.16879999999999998,
+    "run_name": "ang-08.0_att068.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 70.0,
+    "attenuation_percent": 13.34,
+    "coincidence_rate": 95.99999999999999,
+    "efficiency": 0.09599999999999999,
+    "run_name": "ang-08.0_att070.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 72.0,
+    "attenuation_percent": 12.59,
+    "coincidence_rate": 52.00000000000001,
+    "efficiency": 0.052000000000000005,
+    "run_name": "ang-08.0_att072.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 74.0,
+    "attenuation_percent": 11.89,
+    "coincidence_rate": 26.999999999999996,
+    "efficiency": 0.026999999999999996,
+    "run_name": "ang-08.0_att074.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 76.0,
+    "attenuation_percent": 11.22,
+    "coincidence_rate": 25.0,
+    "efficiency": 0.025,
+    "run_name": "ang-08.0_att076.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 78.0,
+    "attenuation_percent": 10.59,
+    "coincidence_rate": 5.999999999999999,
+    "efficiency": 0.005999999999999999,
+    "run_name": "ang-08.0_att078.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 80.0,
+    "attenuation_percent": 10.0,
+    "coincidence_rate": 2.9999999999999996,
+    "efficiency": 0.0029999999999999996,
+    "run_name": "ang-08.0_att080.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 82.0,
+    "attenuation_percent": 9.44,
+    "coincidence_rate": 7.999999999999999,
+    "efficiency": 0.007999999999999998,
+    "run_name": "ang-08.0_att082.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 84.0,
+    "attenuation_percent": 8.91,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-08.0_att084.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 86.0,
+    "attenuation_percent": 8.41,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang-08.0_att086.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 88.0,
+    "attenuation_percent": 7.94,
+    "coincidence_rate": 0.2,
+    "efficiency": 0.0002,
+    "run_name": "ang-08.0_att088.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 90.0,
+    "attenuation_percent": 7.5,
+    "coincidence_rate": 0.6000000000000001,
+    "efficiency": 0.0006000000000000001,
+    "run_name": "ang-08.0_att090.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 92.0,
+    "attenuation_percent": 7.08,
+    "coincidence_rate": 0.8,
+    "efficiency": 0.0008,
+    "run_name": "ang-08.0_att092.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 94.0,
+    "attenuation_percent": 6.68,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang-08.0_att094.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 96.0,
+    "attenuation_percent": 6.31,
+    "coincidence_rate": 1.4000000000000004,
+    "efficiency": 0.0014000000000000004,
+    "run_name": "ang-08.0_att096.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 98.0,
+    "attenuation_percent": 5.96,
+    "coincidence_rate": 0.7999999999999999,
+    "efficiency": 0.0007999999999999999,
+    "run_name": "ang-08.0_att098.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 100.0,
+    "attenuation_percent": 5.62,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang-08.0_att100.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 102.0,
+    "attenuation_percent": 5.31,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang-08.0_att102.00"
+  },
+  {
+    "angle_deg": -8.0,
+    "attenuation_code": 104.0,
+    "attenuation_percent": 5.01,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-08.0_att104.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 40.0,
+    "attenuation_percent": 31.62,
+    "coincidence_rate": 1001.1999999999998,
+    "efficiency": 1.0011999999999999,
+    "run_name": "ang-06.0_att040.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 42.0,
+    "attenuation_percent": 29.85,
+    "coincidence_rate": 1001.0,
+    "efficiency": 1.001,
+    "run_name": "ang-06.0_att042.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 44.0,
+    "attenuation_percent": 28.18,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang-06.0_att044.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 46.0,
+    "attenuation_percent": 26.61,
+    "coincidence_rate": 1001.3000000000002,
+    "efficiency": 1.0013,
+    "run_name": "ang-06.0_att046.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 48.0,
+    "attenuation_percent": 25.12,
+    "coincidence_rate": 1000.1,
+    "efficiency": 1.0001,
+    "run_name": "ang-06.0_att048.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 50.0,
+    "attenuation_percent": 23.71,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang-06.0_att050.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 52.0,
+    "attenuation_percent": 22.39,
+    "coincidence_rate": 997.0000000000002,
+    "efficiency": 0.9970000000000002,
+    "run_name": "ang-06.0_att052.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 54.0,
+    "attenuation_percent": 21.13,
+    "coincidence_rate": 982.0000000000002,
+    "efficiency": 0.9820000000000002,
+    "run_name": "ang-06.0_att054.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 56.0,
+    "attenuation_percent": 19.95,
+    "coincidence_rate": 923.9999999999999,
+    "efficiency": 0.9239999999999999,
+    "run_name": "ang-06.0_att056.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 58.0,
+    "attenuation_percent": 18.84,
+    "coincidence_rate": 855.0,
+    "efficiency": 0.855,
+    "run_name": "ang-06.0_att058.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 60.0,
+    "attenuation_percent": 17.78,
+    "coincidence_rate": 718.9999999999999,
+    "efficiency": 0.7189999999999999,
+    "run_name": "ang-06.0_att060.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 62.0,
+    "attenuation_percent": 16.79,
+    "coincidence_rate": 581.0000000000001,
+    "efficiency": 0.5810000000000001,
+    "run_name": "ang-06.0_att062.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 64.0,
+    "attenuation_percent": 15.85,
+    "coincidence_rate": 418.00000000000006,
+    "efficiency": 0.41800000000000004,
+    "run_name": "ang-06.0_att064.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 66.0,
+    "attenuation_percent": 14.96,
+    "coincidence_rate": 300.4,
+    "efficiency": 0.3004,
+    "run_name": "ang-06.0_att066.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 68.0,
+    "attenuation_percent": 14.13,
+    "coincidence_rate": 183.20000000000002,
+    "efficiency": 0.18320000000000003,
+    "run_name": "ang-06.0_att068.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 70.0,
+    "attenuation_percent": 13.34,
+    "coincidence_rate": 96.99999999999999,
+    "efficiency": 0.09699999999999999,
+    "run_name": "ang-06.0_att070.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 72.0,
+    "attenuation_percent": 12.59,
+    "coincidence_rate": 43.99999999999999,
+    "efficiency": 0.04399999999999999,
+    "run_name": "ang-06.0_att072.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 74.0,
+    "attenuation_percent": 11.89,
+    "coincidence_rate": 25.599999999999998,
+    "efficiency": 0.025599999999999998,
+    "run_name": "ang-06.0_att074.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 76.0,
+    "attenuation_percent": 11.22,
+    "coincidence_rate": 15.3,
+    "efficiency": 0.015300000000000001,
+    "run_name": "ang-06.0_att076.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 78.0,
+    "attenuation_percent": 10.59,
+    "coincidence_rate": 9.3,
+    "efficiency": 0.009300000000000001,
+    "run_name": "ang-06.0_att078.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 80.0,
+    "attenuation_percent": 10.0,
+    "coincidence_rate": 3.9999999999999996,
+    "efficiency": 0.003999999999999999,
+    "run_name": "ang-06.0_att080.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 82.0,
+    "attenuation_percent": 9.44,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang-06.0_att082.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 84.0,
+    "attenuation_percent": 8.91,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-06.0_att084.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 86.0,
+    "attenuation_percent": 8.41,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang-06.0_att086.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 88.0,
+    "attenuation_percent": 7.94,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-06.0_att088.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 90.0,
+    "attenuation_percent": 7.5,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang-06.0_att090.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 92.0,
+    "attenuation_percent": 7.08,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang-06.0_att092.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 94.0,
+    "attenuation_percent": 6.68,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang-06.0_att094.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 96.0,
+    "attenuation_percent": 6.31,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-06.0_att096.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 98.0,
+    "attenuation_percent": 5.96,
+    "coincidence_rate": 2.1999999999999997,
+    "efficiency": 0.0021999999999999997,
+    "run_name": "ang-06.0_att098.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 100.0,
+    "attenuation_percent": 5.62,
+    "coincidence_rate": 1.2999999999999998,
+    "efficiency": 0.0012999999999999997,
+    "run_name": "ang-06.0_att100.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 102.0,
+    "attenuation_percent": 5.31,
+    "coincidence_rate": 0.6,
+    "efficiency": 0.0006,
+    "run_name": "ang-06.0_att102.00"
+  },
+  {
+    "angle_deg": -6.0,
+    "attenuation_code": 104.0,
+    "attenuation_percent": 5.01,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-06.0_att104.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 40.0,
+    "attenuation_percent": 31.62,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang-04.0_att040.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 42.0,
+    "attenuation_percent": 29.85,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang-04.0_att042.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 44.0,
+    "attenuation_percent": 28.18,
+    "coincidence_rate": 1000.2,
+    "efficiency": 1.0002,
+    "run_name": "ang-04.0_att044.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 46.0,
+    "attenuation_percent": 26.61,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang-04.0_att046.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 48.0,
+    "attenuation_percent": 25.12,
+    "coincidence_rate": 1000.7,
+    "efficiency": 1.0007000000000001,
+    "run_name": "ang-04.0_att048.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 50.0,
+    "attenuation_percent": 23.71,
+    "coincidence_rate": 999.8000000000001,
+    "efficiency": 0.9998,
+    "run_name": "ang-04.0_att050.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 52.0,
+    "attenuation_percent": 22.39,
+    "coincidence_rate": 996.0000000000001,
+    "efficiency": 0.9960000000000001,
+    "run_name": "ang-04.0_att052.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 54.0,
+    "attenuation_percent": 21.13,
+    "coincidence_rate": 988.8,
+    "efficiency": 0.9887999999999999,
+    "run_name": "ang-04.0_att054.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 56.0,
+    "attenuation_percent": 19.95,
+    "coincidence_rate": 929.8000000000002,
+    "efficiency": 0.9298000000000002,
+    "run_name": "ang-04.0_att056.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 58.0,
+    "attenuation_percent": 18.84,
+    "coincidence_rate": 846.6,
+    "efficiency": 0.8466,
+    "run_name": "ang-04.0_att058.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 60.0,
+    "attenuation_percent": 17.78,
+    "coincidence_rate": 762.0000000000001,
+    "efficiency": 0.7620000000000001,
+    "run_name": "ang-04.0_att060.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 62.0,
+    "attenuation_percent": 16.79,
+    "coincidence_rate": 568.9999999999999,
+    "efficiency": 0.5689999999999998,
+    "run_name": "ang-04.0_att062.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 64.0,
+    "attenuation_percent": 15.85,
+    "coincidence_rate": 448.00000000000006,
+    "efficiency": 0.44800000000000006,
+    "run_name": "ang-04.0_att064.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 66.0,
+    "attenuation_percent": 14.96,
+    "coincidence_rate": 276.0,
+    "efficiency": 0.276,
+    "run_name": "ang-04.0_att066.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 68.0,
+    "attenuation_percent": 14.13,
+    "coincidence_rate": 191.99999999999997,
+    "efficiency": 0.19199999999999998,
+    "run_name": "ang-04.0_att068.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 70.0,
+    "attenuation_percent": 13.34,
+    "coincidence_rate": 107.99999999999999,
+    "efficiency": 0.10799999999999998,
+    "run_name": "ang-04.0_att070.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 72.0,
+    "attenuation_percent": 12.59,
+    "coincidence_rate": 46.00000000000001,
+    "efficiency": 0.046000000000000006,
+    "run_name": "ang-04.0_att072.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 74.0,
+    "attenuation_percent": 11.89,
+    "coincidence_rate": 26.999999999999996,
+    "efficiency": 0.026999999999999996,
+    "run_name": "ang-04.0_att074.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 76.0,
+    "attenuation_percent": 11.22,
+    "coincidence_rate": 13.100000000000001,
+    "efficiency": 0.013100000000000002,
+    "run_name": "ang-04.0_att076.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 78.0,
+    "attenuation_percent": 10.59,
+    "coincidence_rate": 10.399999999999999,
+    "efficiency": 0.010399999999999998,
+    "run_name": "ang-04.0_att078.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 80.0,
+    "attenuation_percent": 10.0,
+    "coincidence_rate": 2.6000000000000005,
+    "efficiency": 0.0026000000000000007,
+    "run_name": "ang-04.0_att080.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 82.0,
+    "attenuation_percent": 9.44,
+    "coincidence_rate": 5.499999999999999,
+    "efficiency": 0.005499999999999999,
+    "run_name": "ang-04.0_att082.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 84.0,
+    "attenuation_percent": 8.91,
+    "coincidence_rate": 3.3999999999999995,
+    "efficiency": 0.0033999999999999994,
+    "run_name": "ang-04.0_att084.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 86.0,
+    "attenuation_percent": 8.41,
+    "coincidence_rate": 0.6000000000000001,
+    "efficiency": 0.0006000000000000001,
+    "run_name": "ang-04.0_att086.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 88.0,
+    "attenuation_percent": 7.94,
+    "coincidence_rate": 1.7999999999999998,
+    "efficiency": 0.0017999999999999997,
+    "run_name": "ang-04.0_att088.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 90.0,
+    "attenuation_percent": 7.5,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang-04.0_att090.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 92.0,
+    "attenuation_percent": 7.08,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang-04.0_att092.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 94.0,
+    "attenuation_percent": 6.68,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-04.0_att094.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 96.0,
+    "attenuation_percent": 6.31,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang-04.0_att096.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 98.0,
+    "attenuation_percent": 5.96,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-04.0_att098.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 100.0,
+    "attenuation_percent": 5.62,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang-04.0_att100.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 102.0,
+    "attenuation_percent": 5.31,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-04.0_att102.00"
+  },
+  {
+    "angle_deg": -4.0,
+    "attenuation_code": 104.0,
+    "attenuation_percent": 5.01,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang-04.0_att104.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 40.0,
+    "attenuation_percent": 31.62,
+    "coincidence_rate": 1003.9999999999999,
+    "efficiency": 1.0039999999999998,
+    "run_name": "ang-02.0_att040.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 42.0,
+    "attenuation_percent": 29.85,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang-02.0_att042.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 44.0,
+    "attenuation_percent": 28.18,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang-02.0_att044.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 46.0,
+    "attenuation_percent": 26.61,
+    "coincidence_rate": 1002.0000000000002,
+    "efficiency": 1.0020000000000002,
+    "run_name": "ang-02.0_att046.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 48.0,
+    "attenuation_percent": 25.12,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang-02.0_att048.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 50.0,
+    "attenuation_percent": 23.71,
+    "coincidence_rate": 997.9999999999998,
+    "efficiency": 0.9979999999999998,
+    "run_name": "ang-02.0_att050.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 52.0,
+    "attenuation_percent": 22.39,
+    "coincidence_rate": 981.0000000000001,
+    "efficiency": 0.9810000000000001,
+    "run_name": "ang-02.0_att052.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 54.0,
+    "attenuation_percent": 21.13,
+    "coincidence_rate": 943.8,
+    "efficiency": 0.9438,
+    "run_name": "ang-02.0_att054.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 56.0,
+    "attenuation_percent": 19.95,
+    "coincidence_rate": 902.4000000000001,
+    "efficiency": 0.9024000000000001,
+    "run_name": "ang-02.0_att056.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 58.0,
+    "attenuation_percent": 18.84,
+    "coincidence_rate": 813.2,
+    "efficiency": 0.8132,
+    "run_name": "ang-02.0_att058.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 60.0,
+    "attenuation_percent": 17.78,
+    "coincidence_rate": 710.5000000000001,
+    "efficiency": 0.7105000000000001,
+    "run_name": "ang-02.0_att060.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 62.0,
+    "attenuation_percent": 16.79,
+    "coincidence_rate": 549.8,
+    "efficiency": 0.5498,
+    "run_name": "ang-02.0_att062.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 64.0,
+    "attenuation_percent": 15.85,
+    "coincidence_rate": 414.69999999999993,
+    "efficiency": 0.41469999999999996,
+    "run_name": "ang-02.0_att064.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 66.0,
+    "attenuation_percent": 14.96,
+    "coincidence_rate": 296.2,
+    "efficiency": 0.29619999999999996,
+    "run_name": "ang-02.0_att066.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 68.0,
+    "attenuation_percent": 14.13,
+    "coincidence_rate": 185.0,
+    "efficiency": 0.185,
+    "run_name": "ang-02.0_att068.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 70.0,
+    "attenuation_percent": 13.34,
+    "coincidence_rate": 110.99999999999997,
+    "efficiency": 0.11099999999999997,
+    "run_name": "ang-02.0_att070.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 72.0,
+    "attenuation_percent": 12.59,
+    "coincidence_rate": 51.00000000000001,
+    "efficiency": 0.051000000000000004,
+    "run_name": "ang-02.0_att072.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 74.0,
+    "attenuation_percent": 11.89,
+    "coincidence_rate": 38.0,
+    "efficiency": 0.038,
+    "run_name": "ang-02.0_att074.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 76.0,
+    "attenuation_percent": 11.22,
+    "coincidence_rate": 11.999999999999998,
+    "efficiency": 0.011999999999999999,
+    "run_name": "ang-02.0_att076.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 78.0,
+    "attenuation_percent": 10.59,
+    "coincidence_rate": 10.999999999999998,
+    "efficiency": 0.010999999999999998,
+    "run_name": "ang-02.0_att078.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 80.0,
+    "attenuation_percent": 10.0,
+    "coincidence_rate": 5.999999999999999,
+    "efficiency": 0.005999999999999999,
+    "run_name": "ang-02.0_att080.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 82.0,
+    "attenuation_percent": 9.44,
+    "coincidence_rate": 3.9999999999999996,
+    "efficiency": 0.003999999999999999,
+    "run_name": "ang-02.0_att082.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 84.0,
+    "attenuation_percent": 8.91,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-02.0_att084.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 86.0,
+    "attenuation_percent": 8.41,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang-02.0_att086.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 88.0,
+    "attenuation_percent": 7.94,
+    "coincidence_rate": 2.6,
+    "efficiency": 0.0026,
+    "run_name": "ang-02.0_att088.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 90.0,
+    "attenuation_percent": 7.5,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-02.0_att090.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 92.0,
+    "attenuation_percent": 7.08,
+    "coincidence_rate": 0.5,
+    "efficiency": 0.0005,
+    "run_name": "ang-02.0_att092.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 94.0,
+    "attenuation_percent": 6.68,
+    "coincidence_rate": 0.6,
+    "efficiency": 0.0006,
+    "run_name": "ang-02.0_att094.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 96.0,
+    "attenuation_percent": 6.31,
+    "coincidence_rate": 2.1,
+    "efficiency": 0.0021000000000000003,
+    "run_name": "ang-02.0_att096.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 98.0,
+    "attenuation_percent": 5.96,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-02.0_att098.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 100.0,
+    "attenuation_percent": 5.62,
+    "coincidence_rate": 1.0999999999999999,
+    "efficiency": 0.0010999999999999998,
+    "run_name": "ang-02.0_att100.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 102.0,
+    "attenuation_percent": 5.31,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-02.0_att102.00"
+  },
+  {
+    "angle_deg": -2.0,
+    "attenuation_code": 104.0,
+    "attenuation_percent": 5.01,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang-02.0_att104.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 40.0,
+    "attenuation_percent": 31.62,
+    "coincidence_rate": 1000.4000000000001,
+    "efficiency": 1.0004000000000002,
+    "run_name": "ang+00.0_att040.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 42.0,
+    "attenuation_percent": 29.85,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang+00.0_att042.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 44.0,
+    "attenuation_percent": 28.18,
+    "coincidence_rate": 1001.2000000000002,
+    "efficiency": 1.0012,
+    "run_name": "ang+00.0_att044.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 46.0,
+    "attenuation_percent": 26.61,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang+00.0_att046.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 48.0,
+    "attenuation_percent": 25.12,
+    "coincidence_rate": 993.0999999999998,
+    "efficiency": 0.9930999999999998,
+    "run_name": "ang+00.0_att048.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 50.0,
+    "attenuation_percent": 23.71,
+    "coincidence_rate": 993.9999999999999,
+    "efficiency": 0.9939999999999999,
+    "run_name": "ang+00.0_att050.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 52.0,
+    "attenuation_percent": 22.39,
+    "coincidence_rate": 968.9999999999999,
+    "efficiency": 0.9689999999999999,
+    "run_name": "ang+00.0_att052.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 54.0,
+    "attenuation_percent": 21.13,
+    "coincidence_rate": 913.9999999999999,
+    "efficiency": 0.9139999999999999,
+    "run_name": "ang+00.0_att054.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 56.0,
+    "attenuation_percent": 19.95,
+    "coincidence_rate": 852.9999999999999,
+    "efficiency": 0.8529999999999999,
+    "run_name": "ang+00.0_att056.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 58.0,
+    "attenuation_percent": 18.84,
+    "coincidence_rate": 796.0000000000001,
+    "efficiency": 0.7960000000000002,
+    "run_name": "ang+00.0_att058.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 60.0,
+    "attenuation_percent": 17.78,
+    "coincidence_rate": 681.0000000000001,
+    "efficiency": 0.6810000000000002,
+    "run_name": "ang+00.0_att060.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 62.0,
+    "attenuation_percent": 16.79,
+    "coincidence_rate": 558.0,
+    "efficiency": 0.558,
+    "run_name": "ang+00.0_att062.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 64.0,
+    "attenuation_percent": 15.85,
+    "coincidence_rate": 426.00000000000006,
+    "efficiency": 0.42600000000000005,
+    "run_name": "ang+00.0_att064.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 66.0,
+    "attenuation_percent": 14.96,
+    "coincidence_rate": 294.0,
+    "efficiency": 0.294,
+    "run_name": "ang+00.0_att066.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 68.0,
+    "attenuation_percent": 14.13,
+    "coincidence_rate": 191.8,
+    "efficiency": 0.1918,
+    "run_name": "ang+00.0_att068.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 70.0,
+    "attenuation_percent": 13.34,
+    "coincidence_rate": 112.59999999999998,
+    "efficiency": 0.11259999999999998,
+    "run_name": "ang+00.0_att070.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 72.0,
+    "attenuation_percent": 12.59,
+    "coincidence_rate": 65.19999999999999,
+    "efficiency": 0.0652,
+    "run_name": "ang+00.0_att072.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 74.0,
+    "attenuation_percent": 11.89,
+    "coincidence_rate": 44.20000000000001,
+    "efficiency": 0.04420000000000001,
+    "run_name": "ang+00.0_att074.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 76.0,
+    "attenuation_percent": 11.22,
+    "coincidence_rate": 14.600000000000003,
+    "efficiency": 0.014600000000000004,
+    "run_name": "ang+00.0_att076.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 78.0,
+    "attenuation_percent": 10.59,
+    "coincidence_rate": 11.899999999999997,
+    "efficiency": 0.011899999999999997,
+    "run_name": "ang+00.0_att078.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 80.0,
+    "attenuation_percent": 10.0,
+    "coincidence_rate": 4.6,
+    "efficiency": 0.0046,
+    "run_name": "ang+00.0_att080.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 82.0,
+    "attenuation_percent": 9.44,
+    "coincidence_rate": 4.8,
+    "efficiency": 0.0048,
+    "run_name": "ang+00.0_att082.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 84.0,
+    "attenuation_percent": 8.91,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+00.0_att084.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 86.0,
+    "attenuation_percent": 8.41,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang+00.0_att086.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 88.0,
+    "attenuation_percent": 7.94,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+00.0_att088.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 90.0,
+    "attenuation_percent": 7.5,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang+00.0_att090.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 92.0,
+    "attenuation_percent": 7.08,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+00.0_att092.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 94.0,
+    "attenuation_percent": 6.68,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+00.0_att094.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 96.0,
+    "attenuation_percent": 6.31,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+00.0_att096.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 98.0,
+    "attenuation_percent": 5.96,
+    "coincidence_rate": 1.7999999999999998,
+    "efficiency": 0.0017999999999999997,
+    "run_name": "ang+00.0_att098.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 100.0,
+    "attenuation_percent": 5.62,
+    "coincidence_rate": 0.2,
+    "efficiency": 0.0002,
+    "run_name": "ang+00.0_att100.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 102.0,
+    "attenuation_percent": 5.31,
+    "coincidence_rate": 0.30000000000000004,
+    "efficiency": 0.00030000000000000003,
+    "run_name": "ang+00.0_att102.00"
+  },
+  {
+    "angle_deg": 0.0,
+    "attenuation_code": 104.0,
+    "attenuation_percent": 5.01,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+00.0_att104.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 40.0,
+    "attenuation_percent": 31.62,
+    "coincidence_rate": 1002.0000000000002,
+    "efficiency": 1.0020000000000002,
+    "run_name": "ang+02.0_att040.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 42.0,
+    "attenuation_percent": 29.85,
+    "coincidence_rate": 1002.9999999999998,
+    "efficiency": 1.0029999999999997,
+    "run_name": "ang+02.0_att042.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 44.0,
+    "attenuation_percent": 28.18,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang+02.0_att044.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 46.0,
+    "attenuation_percent": 26.61,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang+02.0_att046.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 48.0,
+    "attenuation_percent": 25.12,
+    "coincidence_rate": 997.9999999999998,
+    "efficiency": 0.9979999999999998,
+    "run_name": "ang+02.0_att048.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 50.0,
+    "attenuation_percent": 23.71,
+    "coincidence_rate": 995.4999999999999,
+    "efficiency": 0.9954999999999999,
+    "run_name": "ang+02.0_att050.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 52.0,
+    "attenuation_percent": 22.39,
+    "coincidence_rate": 978.3999999999999,
+    "efficiency": 0.9783999999999998,
+    "run_name": "ang+02.0_att052.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 54.0,
+    "attenuation_percent": 21.13,
+    "coincidence_rate": 941.4999999999999,
+    "efficiency": 0.9414999999999999,
+    "run_name": "ang+02.0_att054.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 56.0,
+    "attenuation_percent": 19.95,
+    "coincidence_rate": 893.2000000000002,
+    "efficiency": 0.8932000000000001,
+    "run_name": "ang+02.0_att056.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 58.0,
+    "attenuation_percent": 18.84,
+    "coincidence_rate": 795.7999999999998,
+    "efficiency": 0.7957999999999998,
+    "run_name": "ang+02.0_att058.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 60.0,
+    "attenuation_percent": 17.78,
+    "coincidence_rate": 706.4,
+    "efficiency": 0.7064,
+    "run_name": "ang+02.0_att060.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 62.0,
+    "attenuation_percent": 16.79,
+    "coincidence_rate": 568.0,
+    "efficiency": 0.568,
+    "run_name": "ang+02.0_att062.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 64.0,
+    "attenuation_percent": 15.85,
+    "coincidence_rate": 393.99999999999994,
+    "efficiency": 0.39399999999999996,
+    "run_name": "ang+02.0_att064.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 66.0,
+    "attenuation_percent": 14.96,
+    "coincidence_rate": 306.99999999999994,
+    "efficiency": 0.30699999999999994,
+    "run_name": "ang+02.0_att066.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 68.0,
+    "attenuation_percent": 14.13,
+    "coincidence_rate": 196.99999999999997,
+    "efficiency": 0.19699999999999998,
+    "run_name": "ang+02.0_att068.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 70.0,
+    "attenuation_percent": 13.34,
+    "coincidence_rate": 110.0,
+    "efficiency": 0.11,
+    "run_name": "ang+02.0_att070.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 72.0,
+    "attenuation_percent": 12.59,
+    "coincidence_rate": 76.0,
+    "efficiency": 0.076,
+    "run_name": "ang+02.0_att072.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 74.0,
+    "attenuation_percent": 11.89,
+    "coincidence_rate": 42.00000000000001,
+    "efficiency": 0.04200000000000001,
+    "run_name": "ang+02.0_att074.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 76.0,
+    "attenuation_percent": 11.22,
+    "coincidence_rate": 7.999999999999999,
+    "efficiency": 0.007999999999999998,
+    "run_name": "ang+02.0_att076.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 78.0,
+    "attenuation_percent": 10.59,
+    "coincidence_rate": 10.999999999999998,
+    "efficiency": 0.010999999999999998,
+    "run_name": "ang+02.0_att078.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 80.0,
+    "attenuation_percent": 10.0,
+    "coincidence_rate": 7.4,
+    "efficiency": 0.0074,
+    "run_name": "ang+02.0_att080.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 82.0,
+    "attenuation_percent": 9.44,
+    "coincidence_rate": 6.2,
+    "efficiency": 0.0062,
+    "run_name": "ang+02.0_att082.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 84.0,
+    "attenuation_percent": 8.91,
+    "coincidence_rate": 0.6000000000000001,
+    "efficiency": 0.0006000000000000001,
+    "run_name": "ang+02.0_att084.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 86.0,
+    "attenuation_percent": 8.41,
+    "coincidence_rate": 2.5000000000000004,
+    "efficiency": 0.0025000000000000005,
+    "run_name": "ang+02.0_att086.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 88.0,
+    "attenuation_percent": 7.94,
+    "coincidence_rate": 1.4000000000000004,
+    "efficiency": 0.0014000000000000004,
+    "run_name": "ang+02.0_att088.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 90.0,
+    "attenuation_percent": 7.5,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+02.0_att090.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 92.0,
+    "attenuation_percent": 7.08,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+02.0_att092.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 94.0,
+    "attenuation_percent": 6.68,
+    "coincidence_rate": 0.1,
+    "efficiency": 0.0001,
+    "run_name": "ang+02.0_att094.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 96.0,
+    "attenuation_percent": 6.31,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+02.0_att096.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 98.0,
+    "attenuation_percent": 5.96,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang+02.0_att098.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 100.0,
+    "attenuation_percent": 5.62,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+02.0_att100.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 102.0,
+    "attenuation_percent": 5.31,
+    "coincidence_rate": 2.9999999999999996,
+    "efficiency": 0.0029999999999999996,
+    "run_name": "ang+02.0_att102.00"
+  },
+  {
+    "angle_deg": 2.0,
+    "attenuation_code": 104.0,
+    "attenuation_percent": 5.01,
+    "coincidence_rate": 2.9999999999999996,
+    "efficiency": 0.0029999999999999996,
+    "run_name": "ang+02.0_att104.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 40.0,
+    "attenuation_percent": 31.62,
+    "coincidence_rate": 1001.6000000000001,
+    "efficiency": 1.0016,
+    "run_name": "ang+04.0_att040.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 42.0,
+    "attenuation_percent": 29.85,
+    "coincidence_rate": 1000.1,
+    "efficiency": 1.0001,
+    "run_name": "ang+04.0_att042.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 44.0,
+    "attenuation_percent": 28.18,
+    "coincidence_rate": 1002.0000000000002,
+    "efficiency": 1.0020000000000002,
+    "run_name": "ang+04.0_att044.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 46.0,
+    "attenuation_percent": 26.61,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang+04.0_att046.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 48.0,
+    "attenuation_percent": 25.12,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang+04.0_att048.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 50.0,
+    "attenuation_percent": 23.71,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang+04.0_att050.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 52.0,
+    "attenuation_percent": 22.39,
+    "coincidence_rate": 1002.9999999999998,
+    "efficiency": 1.0029999999999997,
+    "run_name": "ang+04.0_att052.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 54.0,
+    "attenuation_percent": 21.13,
+    "coincidence_rate": 995.0,
+    "efficiency": 0.995,
+    "run_name": "ang+04.0_att054.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 56.0,
+    "attenuation_percent": 19.95,
+    "coincidence_rate": 927.9999999999998,
+    "efficiency": 0.9279999999999998,
+    "run_name": "ang+04.0_att056.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 58.0,
+    "attenuation_percent": 18.84,
+    "coincidence_rate": 856.0000000000001,
+    "efficiency": 0.8560000000000001,
+    "run_name": "ang+04.0_att058.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 60.0,
+    "attenuation_percent": 17.78,
+    "coincidence_rate": 707.0000000000001,
+    "efficiency": 0.7070000000000001,
+    "run_name": "ang+04.0_att060.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 62.0,
+    "attenuation_percent": 16.79,
+    "coincidence_rate": 556.0,
+    "efficiency": 0.556,
+    "run_name": "ang+04.0_att062.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 64.0,
+    "attenuation_percent": 15.85,
+    "coincidence_rate": 443.59999999999997,
+    "efficiency": 0.44359999999999994,
+    "run_name": "ang+04.0_att064.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 66.0,
+    "attenuation_percent": 14.96,
+    "coincidence_rate": 277.2,
+    "efficiency": 0.2772,
+    "run_name": "ang+04.0_att066.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 68.0,
+    "attenuation_percent": 14.13,
+    "coincidence_rate": 177.49999999999997,
+    "efficiency": 0.17749999999999996,
+    "run_name": "ang+04.0_att068.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 70.0,
+    "attenuation_percent": 13.34,
+    "coincidence_rate": 98.80000000000001,
+    "efficiency": 0.09880000000000001,
+    "run_name": "ang+04.0_att070.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 72.0,
+    "attenuation_percent": 12.59,
+    "coincidence_rate": 55.99999999999999,
+    "efficiency": 0.055999999999999994,
+    "run_name": "ang+04.0_att072.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 74.0,
+    "attenuation_percent": 11.89,
+    "coincidence_rate": 29.999999999999993,
+    "efficiency": 0.029999999999999992,
+    "run_name": "ang+04.0_att074.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 76.0,
+    "attenuation_percent": 11.22,
+    "coincidence_rate": 23.000000000000004,
+    "efficiency": 0.023000000000000003,
+    "run_name": "ang+04.0_att076.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 78.0,
+    "attenuation_percent": 10.59,
+    "coincidence_rate": 13.000000000000002,
+    "efficiency": 0.013000000000000001,
+    "run_name": "ang+04.0_att078.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 80.0,
+    "attenuation_percent": 10.0,
+    "coincidence_rate": 5.0,
+    "efficiency": 0.005,
+    "run_name": "ang+04.0_att080.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 82.0,
+    "attenuation_percent": 9.44,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+04.0_att082.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 84.0,
+    "attenuation_percent": 8.91,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+04.0_att084.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 86.0,
+    "attenuation_percent": 8.41,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang+04.0_att086.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 88.0,
+    "attenuation_percent": 7.94,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang+04.0_att088.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 90.0,
+    "attenuation_percent": 7.5,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+04.0_att090.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 92.0,
+    "attenuation_percent": 7.08,
+    "coincidence_rate": 1.2,
+    "efficiency": 0.0012,
+    "run_name": "ang+04.0_att092.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 94.0,
+    "attenuation_percent": 6.68,
+    "coincidence_rate": 1.5999999999999999,
+    "efficiency": 0.0015999999999999999,
+    "run_name": "ang+04.0_att094.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 96.0,
+    "attenuation_percent": 6.31,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+04.0_att096.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 98.0,
+    "attenuation_percent": 5.96,
+    "coincidence_rate": 0.6,
+    "efficiency": 0.0006,
+    "run_name": "ang+04.0_att098.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 100.0,
+    "attenuation_percent": 5.62,
+    "coincidence_rate": 2.5000000000000004,
+    "efficiency": 0.0025000000000000005,
+    "run_name": "ang+04.0_att100.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 102.0,
+    "attenuation_percent": 5.31,
+    "coincidence_rate": 2.6999999999999997,
+    "efficiency": 0.0026999999999999997,
+    "run_name": "ang+04.0_att102.00"
+  },
+  {
+    "angle_deg": 4.0,
+    "attenuation_code": 104.0,
+    "attenuation_percent": 5.01,
+    "coincidence_rate": 1.7999999999999998,
+    "efficiency": 0.0017999999999999997,
+    "run_name": "ang+04.0_att104.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 40.0,
+    "attenuation_percent": 31.62,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang+06.0_att040.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 42.0,
+    "attenuation_percent": 29.85,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang+06.0_att042.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 44.0,
+    "attenuation_percent": 28.18,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang+06.0_att044.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 46.0,
+    "attenuation_percent": 26.61,
+    "coincidence_rate": 1001.4000000000001,
+    "efficiency": 1.0014,
+    "run_name": "ang+06.0_att046.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 48.0,
+    "attenuation_percent": 25.12,
+    "coincidence_rate": 1000.0000000000001,
+    "efficiency": 1.0000000000000002,
+    "run_name": "ang+06.0_att048.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 50.0,
+    "attenuation_percent": 23.71,
+    "coincidence_rate": 1000.8,
+    "efficiency": 1.0008,
+    "run_name": "ang+06.0_att050.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 52.0,
+    "attenuation_percent": 22.39,
+    "coincidence_rate": 995.3,
+    "efficiency": 0.9953,
+    "run_name": "ang+06.0_att052.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 54.0,
+    "attenuation_percent": 21.13,
+    "coincidence_rate": 984.7999999999998,
+    "efficiency": 0.9847999999999998,
+    "run_name": "ang+06.0_att054.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 56.0,
+    "attenuation_percent": 19.95,
+    "coincidence_rate": 956.6000000000001,
+    "efficiency": 0.9566000000000001,
+    "run_name": "ang+06.0_att056.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 58.0,
+    "attenuation_percent": 18.84,
+    "coincidence_rate": 876.0000000000001,
+    "efficiency": 0.8760000000000001,
+    "run_name": "ang+06.0_att058.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 60.0,
+    "attenuation_percent": 17.78,
+    "coincidence_rate": 728.9999999999999,
+    "efficiency": 0.7289999999999999,
+    "run_name": "ang+06.0_att060.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 62.0,
+    "attenuation_percent": 16.79,
+    "coincidence_rate": 596.0000000000001,
+    "efficiency": 0.5960000000000001,
+    "run_name": "ang+06.0_att062.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 64.0,
+    "attenuation_percent": 15.85,
+    "coincidence_rate": 443.00000000000006,
+    "efficiency": 0.44300000000000006,
+    "run_name": "ang+06.0_att064.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 66.0,
+    "attenuation_percent": 14.96,
+    "coincidence_rate": 301.99999999999994,
+    "efficiency": 0.30199999999999994,
+    "run_name": "ang+06.0_att066.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 68.0,
+    "attenuation_percent": 14.13,
+    "coincidence_rate": 181.99999999999997,
+    "efficiency": 0.18199999999999997,
+    "run_name": "ang+06.0_att068.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 70.0,
+    "attenuation_percent": 13.34,
+    "coincidence_rate": 124.00000000000003,
+    "efficiency": 0.12400000000000003,
+    "run_name": "ang+06.0_att070.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 72.0,
+    "attenuation_percent": 12.59,
+    "coincidence_rate": 57.999999999999986,
+    "efficiency": 0.05799999999999999,
+    "run_name": "ang+06.0_att072.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 74.0,
+    "attenuation_percent": 11.89,
+    "coincidence_rate": 25.8,
+    "efficiency": 0.0258,
+    "run_name": "ang+06.0_att074.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 76.0,
+    "attenuation_percent": 11.22,
+    "coincidence_rate": 11.6,
+    "efficiency": 0.0116,
+    "run_name": "ang+06.0_att076.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 78.0,
+    "attenuation_percent": 10.59,
+    "coincidence_rate": 9.6,
+    "efficiency": 0.0096,
+    "run_name": "ang+06.0_att078.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 80.0,
+    "attenuation_percent": 10.0,
+    "coincidence_rate": 3.2,
+    "efficiency": 0.0032,
+    "run_name": "ang+06.0_att080.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 82.0,
+    "attenuation_percent": 9.44,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang+06.0_att082.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 84.0,
+    "attenuation_percent": 8.91,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+06.0_att084.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 86.0,
+    "attenuation_percent": 8.41,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+06.0_att086.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 88.0,
+    "attenuation_percent": 7.94,
+    "coincidence_rate": 3.5999999999999996,
+    "efficiency": 0.0035999999999999995,
+    "run_name": "ang+06.0_att088.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 90.0,
+    "attenuation_percent": 7.5,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+06.0_att090.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 92.0,
+    "attenuation_percent": 7.08,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+06.0_att092.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 94.0,
+    "attenuation_percent": 6.68,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+06.0_att094.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 96.0,
+    "attenuation_percent": 6.31,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang+06.0_att096.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 98.0,
+    "attenuation_percent": 5.96,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+06.0_att098.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 100.0,
+    "attenuation_percent": 5.62,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+06.0_att100.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 102.0,
+    "attenuation_percent": 5.31,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+06.0_att102.00"
+  },
+  {
+    "angle_deg": 6.0,
+    "attenuation_code": 104.0,
+    "attenuation_percent": 5.01,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+06.0_att104.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 40.0,
+    "attenuation_percent": 31.62,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang+08.0_att040.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 42.0,
+    "attenuation_percent": 29.85,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang+08.0_att042.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 44.0,
+    "attenuation_percent": 28.18,
+    "coincidence_rate": 1001.0000000000001,
+    "efficiency": 1.0010000000000001,
+    "run_name": "ang+08.0_att044.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 46.0,
+    "attenuation_percent": 26.61,
+    "coincidence_rate": 1002.0000000000002,
+    "efficiency": 1.0020000000000002,
+    "run_name": "ang+08.0_att046.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 48.0,
+    "attenuation_percent": 25.12,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang+08.0_att048.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 50.0,
+    "attenuation_percent": 23.71,
+    "coincidence_rate": 1000.0,
+    "efficiency": 1.0,
+    "run_name": "ang+08.0_att050.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 52.0,
+    "attenuation_percent": 22.39,
+    "coincidence_rate": 993.9999999999999,
+    "efficiency": 0.9939999999999999,
+    "run_name": "ang+08.0_att052.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 54.0,
+    "attenuation_percent": 21.13,
+    "coincidence_rate": 987.0000000000002,
+    "efficiency": 0.9870000000000002,
+    "run_name": "ang+08.0_att054.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 56.0,
+    "attenuation_percent": 19.95,
+    "coincidence_rate": 926.6000000000001,
+    "efficiency": 0.9266000000000001,
+    "run_name": "ang+08.0_att056.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 58.0,
+    "attenuation_percent": 18.84,
+    "coincidence_rate": 865.9999999999998,
+    "efficiency": 0.8659999999999998,
+    "run_name": "ang+08.0_att058.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 60.0,
+    "attenuation_percent": 17.78,
+    "coincidence_rate": 721.2,
+    "efficiency": 0.7212000000000001,
+    "run_name": "ang+08.0_att060.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 62.0,
+    "attenuation_percent": 16.79,
+    "coincidence_rate": 609.0,
+    "efficiency": 0.609,
+    "run_name": "ang+08.0_att062.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 64.0,
+    "attenuation_percent": 15.85,
+    "coincidence_rate": 428.6000000000001,
+    "efficiency": 0.4286000000000001,
+    "run_name": "ang+08.0_att064.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 66.0,
+    "attenuation_percent": 14.96,
+    "coincidence_rate": 298.0,
+    "efficiency": 0.298,
+    "run_name": "ang+08.0_att066.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 68.0,
+    "attenuation_percent": 14.13,
+    "coincidence_rate": 183.89999999999998,
+    "efficiency": 0.18389999999999998,
+    "run_name": "ang+08.0_att068.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 70.0,
+    "attenuation_percent": 13.34,
+    "coincidence_rate": 107.00000000000001,
+    "efficiency": 0.10700000000000001,
+    "run_name": "ang+08.0_att070.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 72.0,
+    "attenuation_percent": 12.59,
+    "coincidence_rate": 63.99999999999999,
+    "efficiency": 0.06399999999999999,
+    "run_name": "ang+08.0_att072.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 74.0,
+    "attenuation_percent": 11.89,
+    "coincidence_rate": 26.000000000000004,
+    "efficiency": 0.026000000000000002,
+    "run_name": "ang+08.0_att074.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 76.0,
+    "attenuation_percent": 11.22,
+    "coincidence_rate": 15.0,
+    "efficiency": 0.015,
+    "run_name": "ang+08.0_att076.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 78.0,
+    "attenuation_percent": 10.59,
+    "coincidence_rate": 3.9999999999999996,
+    "efficiency": 0.003999999999999999,
+    "run_name": "ang+08.0_att078.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 80.0,
+    "attenuation_percent": 10.0,
+    "coincidence_rate": 3.9999999999999996,
+    "efficiency": 0.003999999999999999,
+    "run_name": "ang+08.0_att080.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 82.0,
+    "attenuation_percent": 9.44,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+08.0_att082.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 84.0,
+    "attenuation_percent": 8.91,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+08.0_att084.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 86.0,
+    "attenuation_percent": 8.41,
+    "coincidence_rate": 2.9999999999999996,
+    "efficiency": 0.0029999999999999996,
+    "run_name": "ang+08.0_att086.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 88.0,
+    "attenuation_percent": 7.94,
+    "coincidence_rate": 0.2,
+    "efficiency": 0.0002,
+    "run_name": "ang+08.0_att088.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 90.0,
+    "attenuation_percent": 7.5,
+    "coincidence_rate": 2.8000000000000003,
+    "efficiency": 0.0028000000000000004,
+    "run_name": "ang+08.0_att090.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 92.0,
+    "attenuation_percent": 7.08,
+    "coincidence_rate": 0.6000000000000001,
+    "efficiency": 0.0006000000000000001,
+    "run_name": "ang+08.0_att092.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 94.0,
+    "attenuation_percent": 6.68,
+    "coincidence_rate": 1.9999999999999998,
+    "efficiency": 0.0019999999999999996,
+    "run_name": "ang+08.0_att094.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 96.0,
+    "attenuation_percent": 6.31,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+08.0_att096.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 98.0,
+    "attenuation_percent": 5.96,
+    "coincidence_rate": 3.5,
+    "efficiency": 0.0035,
+    "run_name": "ang+08.0_att098.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 100.0,
+    "attenuation_percent": 5.62,
+    "coincidence_rate": 0.9999999999999999,
+    "efficiency": 0.0009999999999999998,
+    "run_name": "ang+08.0_att100.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 102.0,
+    "attenuation_percent": 5.31,
+    "coincidence_rate": 0.8999999999999999,
+    "efficiency": 0.0008999999999999999,
+    "run_name": "ang+08.0_att102.00"
+  },
+  {
+    "angle_deg": 8.0,
+    "attenuation_code": 104.0,
+    "attenuation_percent": 5.01,
+    "coincidence_rate": 0.0,
+    "efficiency": 0.0,
+    "run_name": "ang+08.0_att104.00"
+  }
+]
