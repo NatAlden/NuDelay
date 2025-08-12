@@ -83,10 +83,10 @@ def make_band_limited_noise(json_path,
     time_ns = np.arange(N) * dt_ns
     return time_ns, noise_mV
 
-def generate_pulse (pulse_v, pulse_t , STEP, simulation_index_duration, amplitude_scale):
+def generate_pulse (pulse_v, pulse_t , STEP, simulation_index_duration, amplitude_scale, start_time=0):
 
 
-    start_time= random.uniform(0, STEP)
+    #start_time= random.uniform(0, STEP)
     start_index= np.argmin(np.where(pulse_t >= start_time)[0])
     pulse_indices= np.linspace(start_index, len(pulse_v)-1, simulation_index_duration, dtype=int)
     
@@ -96,27 +96,7 @@ def generate_pulse (pulse_v, pulse_t , STEP, simulation_index_duration, amplitud
 
     signal = pulse_v[pulse_indices] * amplitude_scale  # Scale the pulse voltage
     return signal
-"""
-def generate_pulse_at_angle(pulse_voltage, pulse_time, time_step, simulation_duration_samples, amplitude_scale, angle, start_seed, channel_index):
 
-
-  
-    delay_dt = angle_delay_time(angle)
-
-    if delay_dt < 0:
-        delay_ns = 3 * np.abs(delay_dt)  + delay_dt * channel_index
-    else:
-        delay_ns = delay_dt * channel_index
-
-    
-
-    start_time = start_seed + delay_ns
-    start_index = np.argmin(np.where(pulse_time >= start_time)[0])
-    
-
-    return signal
-
-"""
 def generate_pulse_at_angle(
     pulse_voltage,                 # 1D array of the pulse shape
     pulse_time,                    # 1D array of times (ns) for pulse_voltage
@@ -173,7 +153,7 @@ def digitize_signal(signal, max_signal):
     return digitized_signal
 
 def make_full_signal(impulse_json_path, SIMULATION_DURATION_NS, SAMPLING_RATE, NOISE_EQUALIZE,
-                     pulse_voltage, pulse_time, time_step, simulation_duration_samples, amplitude_scale, max_signal):
+                     pulse_voltage, pulse_time, time_step, simulation_duration_samples, amplitude_scale, max_signal, start_time=0):
 
     t, noise=make_band_limited_noise(
         impulse_json_path,
@@ -184,7 +164,7 @@ def make_full_signal(impulse_json_path, SIMULATION_DURATION_NS, SAMPLING_RATE, N
         target_rms_mV=NOISE_EQUALIZE,
     ) 
     
-    pulse = generate_pulse(pulse_voltage, pulse_time, time_step, simulation_duration_samples, amplitude_scale)
+    pulse = generate_pulse(pulse_voltage, pulse_time, time_step, simulation_duration_samples, amplitude_scale, start_time)
     full_signal = digitize_signal(noise + pulse, max_signal)
     full_signal = full_signal[:simulation_duration_samples]  # Ensure the signal length matches the
     return t, full_signal
@@ -277,8 +257,6 @@ def find_triggers(channel_signals, time_axis, *,            # ← positional, ke
     return triggers
 
 
-
-
 def make_full_signal_angle(impulse_json_path, SIMULATION_DURATION_NS, SAMPLING_RATE, NOISE_EQUALIZE,
                      pulse_voltage, pulse_time, time_step, simulation_duration_samples, amplitude_scale, max_signal, angle, delay_seed, channel_index):
 
@@ -292,7 +270,7 @@ def make_full_signal_angle(impulse_json_path, SIMULATION_DURATION_NS, SAMPLING_R
     ) 
     
     pulse = generate_pulse_at_angle(pulse_voltage, pulse_time, time_step, simulation_duration_samples, amplitude_scale, angle, delay_seed, channel_index)
-    full_signal = digitize_signal( noise+ pulse, max_signal) 
+    full_signal = digitize_signal( noise+ pulse, max_signal) #
     full_signal = full_signal[:simulation_duration_samples]  # Ensure the signal length matches the
     return t, full_signal
 

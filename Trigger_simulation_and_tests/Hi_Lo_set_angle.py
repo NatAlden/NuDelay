@@ -20,7 +20,7 @@ n_of_windows = 3
 SIMULATION_DURATION_NS= n_of_windows/(WINDOW_SIZE) *1e9 #ns
 SIMULATION_DURATION_SAMPLES = int(SIMULATION_DURATION_NS / TIME_STEP)+1  # Number of samples in the simulation duration
 N_of_channels = 4
-THRESHOLD_V= [20, 20, 20, 20]  # ADC counts
+THRESHOLD_V= [18,21,19,21]   # ADC counts
 N_REQ = 2  # Number of channels required for a trigger
 COINC_NS = SIMULATION_DURATION_NS
 
@@ -59,7 +59,7 @@ for run in range(NUMBER_OF_RUNS):
                                 simulation_duration_samples=SIMULATION_DURATION_SAMPLES,
                                 amplitude_scale=no_pulses,
                                 max_signal=MAX_SIGNAL,
-                                angle=-60,  
+                                angle=45.5,  
                                 delay_seed=start_seed,  
                                 channel_index=ch
                                 ) 
@@ -78,7 +78,7 @@ for run in range(NUMBER_OF_RUNS):
     for trig in triggers:
         print(f"  • t = {trig['t_trigger']:.1f} ns on channels {trig['channels']}")
 
-    plot_4_channels_signals(time_axis, channel_signals, title=f"Run {run+1} - 4 Channels Signals - 60 deg")
+    plot_4_channels_signals(time_axis, channel_signals, title=f"Run {run+1} - 4 Channels Signals -10.5 deg")
     #print(all_triggers.extend(triggers))
     
     #print progresion

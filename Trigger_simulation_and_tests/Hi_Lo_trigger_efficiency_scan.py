@@ -9,7 +9,7 @@ import random
 import json
 from pathlib import Path
 from sim_functions import make_band_limited_noise, generate_pulse, digitize_signal, make_full_signal, plot_4_channels_signals, find_triggers
-
+from scipy.optimize import curve_fit
 
 #parameters
 SAMPLING_RATE   =  0.472            # GHz   (0.472 GS/s)
@@ -24,7 +24,7 @@ N_of_channels = 4
 THRESHOLD_V= [18,21,19,21]  # ADC counts
 N_REQ = 2  # Number of channels required for a trigger
 COINC_NS = SIMULATION_DURATION_NS
-SCAN_RATE = 200 
+SCAN_RATE = 101 
 PULSE_AMPLITUDES = np.concatenate([
     np.arange(6, 12, 2),   
     np.arange(12, 21, 0.7),  
@@ -51,7 +51,8 @@ for run, run_pulse_amplitude in enumerate(PULSE_AMPLITUDES):
     channel_signals= [[] for _ in range(N_of_channels)]
     time_start= run * SIMULATION_DURATION_NS
     COINC=0
-    for SCAN in range(SCAN_RATE):  
+    for SCAN in range(SCAN_RATE):
+        start_seed=random.uniform(0, TIME_STEP)  
 
         for ch in range(N_of_channels):
             t, channel_signals[ch] = make_full_signal(impulse_json_path=impulse_response_path,
@@ -63,7 +64,9 @@ for run, run_pulse_amplitude in enumerate(PULSE_AMPLITUDES):
                                     time_step=TIME_STEP,
                                     simulation_duration_samples=SIMULATION_DURATION_SAMPLES,
                                     amplitude_scale=run_pulse_amplitude,
-                                    max_signal=MAX_SIGNAL) 
+                                    max_signal=MAX_SIGNAL, 
+                                    start_time=start_seed
+                                    ) 
         time_axis = t + time_start  # Adjust time axis for the current run
         #finding if channels exceed the threshold
         SNR = run_pulse_amplitude / NOISE_EQUALIZE
@@ -78,7 +81,7 @@ for run, run_pulse_amplitude in enumerate(PULSE_AMPLITUDES):
 #sigmoid fit for SNR to pass fraction
 def sigmoid(x, a, b):
     return 1 / (1 + np.exp(-a * (x - b)))
-from scipy.optimize import curve_fit
+
 # Fit the sigmoid function to the data
 params, _ = curve_fit(sigmoid, SNR_values, pass_fraction, p0=[1, np.mean(SNR_values)])
 a, b = params
@@ -97,6 +100,6 @@ plt.xlabel('SNR')
 plt.ylabel('Pass Fraction')
 plt.grid()
 plt.legend()
-plt.savefig("Hi_Lo_trigger_efficiency_scan_flower_thresh_200.png")
+plt.savefig("Hi_Lo_trigger_efficiency_scan_flower_thresh_101.png")
 
 

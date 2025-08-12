@@ -38,7 +38,7 @@ pulse_time = pulse_time - pulse_time[0]  # Start from 0 ns
 impulse_response_path   = Path("/home/shamshassiki/Shams_Analyzing_scripts/Trigger_simulation_and_tests/jsons/impulse_response_Freauency_35_240.json")
 
 
-
+start_seed=random.uniform(0, TIME_STEP)
 
 t, ch_signal = make_full_signal(impulse_json_path=impulse_response_path,
                             SIMULATION_DURATION_NS=SIMULATION_DURATION_NS,
@@ -49,7 +49,9 @@ t, ch_signal = make_full_signal(impulse_json_path=impulse_response_path,
                             time_step=TIME_STEP,
                             simulation_duration_samples=SIMULATION_DURATION_SAMPLES,
                             amplitude_scale=40,
-                            max_signal=MAX_SIGNAL) 
+                            max_signal=MAX_SIGNAL,
+                            start_time=start_seed
+                            ) 
 
 
 

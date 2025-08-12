@@ -48,6 +48,7 @@ for run in range(NUMBER_OF_RUNS):
     channel_signals= [[] for _ in range(N_of_channels)]
     time_start= run * SIMULATION_DURATION_NS
     no_pulses = 0 
+    start_seed=random.uniform(0, TIME_STEP)
     for ch in range(N_of_channels):
         t, channel_signals[ch] = make_full_signal(impulse_json_path=impulse_response_path,
                                 SIMULATION_DURATION_NS=SIMULATION_DURATION_NS,
@@ -58,7 +59,9 @@ for run in range(NUMBER_OF_RUNS):
                                 time_step=TIME_STEP,
                                 simulation_duration_samples=SIMULATION_DURATION_SAMPLES,
                                 amplitude_scale=no_pulses,
-                                max_signal=MAX_SIGNAL) 
+                                max_signal=MAX_SIGNAL,
+                                start_time=start_seed
+                                )
     time_axis = t + time_start  # Adjust time axis for the current run
 
     triggers = find_triggers(channel_signals, time_axis,
