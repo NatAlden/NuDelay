@@ -59,11 +59,12 @@ for run in range(NUMBER_OF_RUNS):
                                 simulation_duration_samples=SIMULATION_DURATION_SAMPLES,
                                 amplitude_scale=no_pulses,
                                 max_signal=MAX_SIGNAL,
-                                angle=45.5,  
+                                angle=0,  
                                 delay_seed=start_seed,  
                                 channel_index=ch
                                 ) 
     time_axis = t + time_start  # Adjust time axis for the current run
+    plot_4_channels_signals(time_axis, channel_signals, title=f"Run {run+1} - TESTNOW")
 
     triggers = find_triggers(channel_signals, time_axis,
                              threshold=THRESHOLD_V,
@@ -78,7 +79,6 @@ for run in range(NUMBER_OF_RUNS):
     for trig in triggers:
         print(f"  • t = {trig['t_trigger']:.1f} ns on channels {trig['channels']}")
 
-    plot_4_channels_signals(time_axis, channel_signals, title=f"Run {run+1} - 4 Channels Signals -10.5 deg")
     #print(all_triggers.extend(triggers))
     
     #print progresion

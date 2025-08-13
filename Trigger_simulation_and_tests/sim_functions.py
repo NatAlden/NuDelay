@@ -6,6 +6,11 @@ import random
 import math
 import os
 import sys
+from scipy.optimize import curve_fit
+from scipy.signal import firwin, lfilter
+
+def sigmoid(x, a, b):
+    return 1 / (1 + np.exp(-a * (x - b)))
 
 def angle_delay_time(angle ):
     angle=np.deg2rad(angle)
@@ -83,67 +88,63 @@ def make_band_limited_noise(json_path,
     time_ns = np.arange(N) * dt_ns
     return time_ns, noise_mV
 
-def generate_pulse (pulse_v, pulse_t , STEP, simulation_index_duration, amplitude_scale, start_time=0):
 
+#def generate_pulse (pulse_v, pulse_t , STEP, simulation_index_duration, amplitude_scale, start_time=0):
+#
+#
+#    #start_time= random.uniform(0, STEP)
+#    #start_index= np.argmin(np.where(pulse_t >= start_time)[0])
+#    start_index = np.argmin(np.abs(pulse_t - start_time))
+#    pulse_indices= np.linspace(start_index, len(pulse_v)-1, simulation_index_duration, dtype=int)
+#    
+#
+#    if pulse_indices[-1] > len(pulse_v):
+#        raise ValueError("Pulse exceeds total duration when placed at the specified start time.")
+#
+#    signal = pulse_v[pulse_indices] * amplitude_scale  # Scale the pulse voltage
+#    return signal
 
-    #start_time= random.uniform(0, STEP)
-    start_index= np.argmin(np.where(pulse_t >= start_time)[0])
-    pulse_indices= np.linspace(start_index, len(pulse_v)-1, simulation_index_duration, dtype=int)
+def generate_pulse (pulse_v, pulse_t , STEP, simulation_index_duration, amplitude_scale, start_time):
+
+    start_index = np.argmin(np.abs(pulse_t - start_time))
+    zeros_array=np.zeros(len(pulse_v), dtype=pulse_v.dtype)
+    pulse_v_zeros= np.concatenate((pulse_v, zeros_array))
+    pulse_indices = np.linspace(start_index, start_index + len(pulse_v) - 1, simulation_index_duration, dtype=int)
+    #pulse_indices= np.linspace(start_index, len(pulse_v)-1, simulation_index_duration, dtype=int)
     
-
-    if pulse_indices[-1] > len(pulse_v):
-        raise ValueError("Pulse exceeds total duration when placed at the specified start time.")
-
-    signal = pulse_v[pulse_indices] * amplitude_scale  # Scale the pulse voltage
+    signal = pulse_v_zeros[pulse_indices] * amplitude_scale  # Scale the pulse voltage
     return signal
 
 def generate_pulse_at_angle(
     pulse_voltage,                 # 1D array of the pulse shape
-    pulse_time,                    # 1D array of times (ns) for pulse_voltage
+    pulse_time,                    # 1D array of times (ns) for pulse_voltage (sorted)
     time_step,                     # simulation dt (ns)
     simulation_duration_samples,   # length of the output signal
     amplitude_scale,               # scale factor for the pulse
     angle,                         # beam angle
-    start_seed,                    # base start time (ns)
+    start_seed,                    # base start time (ns), shared across channels per event
     channel_index                  # 0..Nch-1
 ):
-    # Channel delay from your rule
+
+        # Channel delay from your rule
     delay_dt = angle_delay_time(angle)  # ns
     if delay_dt < 0:
         delay_ns = 3 * abs(delay_dt) + delay_dt * channel_index
     else:
         delay_ns = delay_dt * channel_index
-
+    
     start_time = start_seed + delay_ns  # ns shift applied to this channel
 
-    # Prepare arrays
-    pv = np.asarray(pulse_voltage)
-    pt = np.asarray(pulse_time)
-    out = np.zeros(int(simulation_duration_samples), dtype=pv.dtype)
+    start_index = np.argmin(np.abs(pulse_time - start_time))
+    
+    #fill the end of the signal with zeros if the pulse exceeds the total duration
+    zeros=np.zeros(len(pulse_voltage), dtype=pulse_voltage.dtype)
+    pulse_voltage_extended = np.concatenate((pulse_voltage, zeros))
 
-    # Simulation times for this run (0..T) in ns
-    sim_t = np.arange(out.size) * time_step
+    pulse_indices = np.linspace(start_index, start_index +len(pulse_voltage) - 1, simulation_duration_samples, dtype=int)
+    signal= pulse_voltage_extended[pulse_indices] * amplitude_scale  # Scale the pulse voltage
 
-    # What time in the pulse we need to sample for each sim_t
-    src_t = sim_t - start_time
-
-    # Only places where the requested pulse time is within the pulse's support
-    mask = (src_t >= pt[0]) & (src_t <= pt[-1])
-    if not mask.any():
-        return out  # entirely out of range -> all zeros
-
-    # For masked positions, find nearest index in pulse_time
-    st = src_t[mask]
-    idx_right = np.searchsorted(pt, st, side="left")
-    idx_left  = np.clip(idx_right - 1, 0, len(pt) - 1)
-    idx_right = np.clip(idx_right,       0, len(pt) - 1)
-
-    take_right = np.abs(pt[idx_right] - st) <= np.abs(pt[idx_left] - st)
-    idx = np.where(take_right, idx_right, idx_left)
-
-    # Write scaled samples; other positions stay zero
-    out[mask] = pv[idx] * amplitude_scale
-    return out
+    return signal
 
 def digitize_signal(signal, max_signal):
     """
@@ -165,7 +166,7 @@ def make_full_signal(impulse_json_path, SIMULATION_DURATION_NS, SAMPLING_RATE, N
     ) 
     
     pulse = generate_pulse(pulse_voltage, pulse_time, time_step, simulation_duration_samples, amplitude_scale, start_time)
-    full_signal = digitize_signal(noise + pulse, max_signal)
+    full_signal = digitize_signal(noise+pulse, max_signal) #noise + 
     full_signal = full_signal[:simulation_duration_samples]  # Ensure the signal length matches the
     return t, full_signal
 
@@ -273,6 +274,169 @@ def make_full_signal_angle(impulse_json_path, SIMULATION_DURATION_NS, SAMPLING_R
     full_signal = digitize_signal( noise+ pulse, max_signal) #
     full_signal = full_signal[:simulation_duration_samples]  # Ensure the signal length matches the
     return t, full_signal
+
+def fit_sigmoid_get_b(snr, passfrac):
+    params, _ = curve_fit(sigmoid, snr, passfrac, p0=[1, np.mean(snr)])
+    a, b = params
+    return a, b
+
+
+#Phased trigger functions:
+
+def shift_by_samples(sig, shift_samp):
+    """
+    Integer sample shift with symmetric zero padding.
+    shift_samp > 0 delays in time. shift_samp < 0 advances.
+    """
+    L = sig.shape[0]
+    pad = np.zeros(L, dtype=sig.dtype)
+    ext = np.concatenate([pad, sig, pad])      # safe index range: [0 .. 3L-1]
+    idx = np.arange(L) - int(shift_samp) + L   # map 0..L-1 into ext
+    print(idx)
+    return ext[idx]
+
+def per_channel_delay_ns(angle_deg, ch_idx):
+    """
+    Your firmware rule for geometric per-channel delays in ns.
+    Uses global angle_delay_time(angle_deg).
+    """
+    step_ns = angle_delay_time(angle_deg)      # ns per channel step
+    if step_ns < 0:
+        return 3 * abs(step_ns) + step_ns * ch_idx
+    return step_ns * ch_idx
+
+def de_shifter(sig_up, angle_deg, ch_idx, dt_up):
+    """
+    De-shift one upsampled channel to ALIGN a plane wave from angle_deg.
+    Uses integer-sample shift on the upsampled grid (no interpolation).
+    """
+    d_ns   = per_channel_delay_ns(angle_deg, ch_idx)   # arrival delay
+    shift  = int(np.rint(-d_ns / dt_up))               # advance by delay to align
+    return shift_by_samples(sig_up, shift)
+
+def window_power(segment, division_factor):
+    """One-liner: sum of squares with scaling."""
+    return float(np.dot(segment, segment)) / float(division_factor)
+
+def iter_overlapping_windows(x, window_size, step):
+    """
+    Yield (start_idx, center_idx, segment_view) for overlapping windows.
+    window_size and step are integers in upsampled samples.
+    """
+    W = int(window_size)
+    S = int(step)
+    if W <= 0 or S <= 0 or len(x) < W:
+        return
+    last_start = len(x) - W
+    for s in range(0, last_start + 1, S):
+        c = s + W // 2
+        yield s, c, x[s:s+W]
+
+def scan_beam_for_triggers(beam, t_up, *, threshold, window_size, window_step, division_factor):
+    """
+    Slide overlapping windows across 'beam', compute power per window,
+    and return list of (t_trigger, power_value) where power >= threshold.
+    """
+    hits = []
+    for s, cidx, seg in iter_overlapping_windows(beam, window_size, window_step):
+        p = window_power(seg, division_factor)
+        if p >= threshold:
+            hits.append((float(t_up[min(cidx, len(t_up)-1)]), float(p)))
+    return hits
+
+# ───────────────────── main phased trigger ─────────────────────
+
+def find_phased_triggers(channel_signals, time_axis, phased_trigger_parameters):
+    """
+    Phased-array trigger (modular):
+      1) Upsample each channel by UPSAMPLE_FACTOR (zero-stuff + FIR LPF with quantized taps)
+      2) For each beam angle, de-shift each channel with generate_pulse-like integer shifting
+      3) Coherent sum
+      4) Overlapping window power (sum of squares / DIV)
+      5) Trigger if any window power >= threshold
+
+    Returns a list of dicts:
+      {"t_trigger": float, "channels": [0,1,2,3], "beam_angle": float, "beam_index": int, "power_value": float}
+    """
+    (PHASED_THRESHOLD,
+     UPSAMPLE_FACTOR,
+     PHASED_BEAMS,
+     POWER_WINDOW_SIZE,
+     POWER_WINDOW_STEP,
+     POWER_DIVISION_FACTOR) = phased_trigger_parameters
+
+    n_ch = len(channel_signals)
+    if n_ch == 0:
+        return []
+
+    time_axis = np.asarray(time_axis)
+    dt_ns  = float(time_axis[1] - time_axis[0])
+    fs_orig = 1.0 / dt_ns
+    fs_up   = fs_orig * UPSAMPLE_FACTOR
+    dt_up   = dt_ns / UPSAMPLE_FACTOR
+
+    # 1) Upsample: zero-stuff + quantized FIR low-pass (firmware-like)
+    taps = firwin(45, cutoff=fs_orig * 0.5, pass_zero='lowpass', fs=fs_up)
+    taps = np.round(taps * 256) / 256.0
+
+    up_ch = []
+    for ch in range(n_ch):
+        x = np.asarray(channel_signals[ch], dtype=float)
+        up = np.zeros(len(x) * UPSAMPLE_FACTOR, dtype=float)
+        up[::UPSAMPLE_FACTOR] = x
+        up_filt = lfilter(taps, [1.0], up)
+        up_ch.append(up_filt)
+    up_ch = np.asarray(up_ch)              # (n_ch, n_up)
+    n_up  = up_ch.shape[1]
+
+    t0   = float(time_axis[0])
+    t_up = t0 + np.arange(n_up) * dt_up
+
+    triggers = []
+
+    # 2..5) Loop over beams
+    for b_idx, ang in enumerate(PHASED_BEAMS):
+        # De-shift every channel to align arrivals for beam 'ang'
+        aligned = np.empty((n_ch, n_up), dtype=float)
+        for ch in range(n_ch):
+            aligned[ch] = de_shifter(up_ch[ch], ang, ch, dt_up)
+
+        # Coherent sum
+        beam = aligned.mean(axis=0)
+
+        # Overlapping window power and thresholding
+        hits = scan_beam_for_triggers(
+            beam, t_up,
+            threshold=PHASED_THRESHOLD,
+            window_size=POWER_WINDOW_SIZE,
+            window_step=POWER_WINDOW_STEP,
+            division_factor=POWER_DIVISION_FACTOR
+        )
+
+        for t_hit, pval in hits:
+            triggers.append({
+                "t_trigger": t_hit,
+                "channels": list(range(n_ch)),    # PA uses all channels
+                "beam_angle": float(ang),
+                "beam_index": int(b_idx),
+                "power_value": pval,
+            })
+
+    triggers.sort(key=lambda tr: tr["t_trigger"])
+    return triggers
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

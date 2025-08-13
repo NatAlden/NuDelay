@@ -27,12 +27,20 @@ SIMULATION_DURATION_SAMPLES = int(SIMULATION_DURATION_NS / TIME_STEP) + 1
 N_CHANNELS      = 4
 
 # Trigger configuration
-THRESHOLD_V     =  [18,21,19,21]   # per-channel thresholds in ADC
-N_REQ           = 2                  # coincidence requirement
-COINC_NS        = SIMULATION_DURATION_NS
+PHASED_THRESHOLD     =  900   # per-channel thresholds in ADC
+UPSAMPLE_FACTOR      = 4 # upsampling factor for the pulse
+PHASED_BEAMS = [
+    -60.0, -45.11838005, -33.44299614, -23.18167437, -13.66170567,
+    -4.51554582, 4.51554582, 13.66170567, 23.18167437, 33.44299614,
+    45.11838005, 60.0
+] # Phased beam angles in degrees
+POWER_WINDOW_SIZE = 24 #Samples (upsampled sampling)
+POWER_WINDOOW_STEP = 4 #Samples (upsampled sampling)
+POWER_DIVISION_FACTOR = 32
+PHASED_TRIGGER_PARAMETERS = [PHASED_THRESHOLD, UPSAMPLE_FACTOR, PHASED_BEAMS,POWER_WINDOW_SIZE, POWER_WINDOOW_STEP, POWER_DIVISION_FACTOR]
 
 # Scan settings
-ANGLES_DEG      = np.arange(0, 12, 10.45)      # angles to scan
+ANGLES_DEG      = np.arange(0, 12, 1)      # angles to scan
 # Keep your finer spacing between 10 and 20, otherwise step 2
 PULSE_AMPLITUDES = np.concatenate([
     np.arange(6, 12, 2),
@@ -40,15 +48,15 @@ PULSE_AMPLITUDES = np.concatenate([
     np.arange(22, 38, 2),
 ])
 
-SCAN_RATE       = 800   # repeats per amplitude
+SCAN_RATE       = 100   # repeats per amplitude
 
 # I/O
 IMPULSE_JSON    = Path("/home/shamshassiki/Shams_Analyzing_scripts/Trigger_simulation_and_tests/jsons/impulse_response_Freauency_35_240.json")
 PULSE_JSON      = Path("/home/shamshassiki/Shams_Analyzing_scripts/Trigger_simulation_and_tests/jsons/upsampled_2filter_pulse_example.json")
 
-FINAL_PNG       = "Test_from_2points_HiLo_effect.png"
+FINAL_PNG       = "Test_from_0to11_HiLo_effect.png"
 SAVE_PER_ANGLE  = True
-PER_ANGLE_PREFIX= "Test_from_2points_HiLo_effect_single.png"
+PER_ANGLE_PREFIX= "Test_from_0to11_HiLo_effect_single.png"
 
 
 # =======================================================

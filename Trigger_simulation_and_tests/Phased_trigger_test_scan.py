@@ -8,7 +8,7 @@ import time
 import random
 import json
 from pathlib import Path
-from sim_functions import make_band_limited_noise, generate_pulse, digitize_signal, make_full_signal, plot_4_channels_signals, find_triggers, sigmoid
+from sim_functions import make_band_limited_noise, generate_pulse, digitize_signal, make_full_signal, plot_4_channels_signals, sigmoid, find_phased_triggers
 from scipy.optimize import curve_fit
 
 #parameters
@@ -24,12 +24,25 @@ N_of_channels = 4
 THRESHOLD_V= [18,21,19,21]  # ADC counts
 N_REQ = 2  # Number of channels required for a trigger
 COINC_NS = SIMULATION_DURATION_NS
-SCAN_RATE = 800 
+SCAN_RATE = 50 
 PULSE_AMPLITUDES = np.concatenate([
-    np.arange(6, 12, 2),   
-    np.arange(12, 21, 0.7),  
-    np.arange(22, 38, 2)   
+    np.arange(15, 19, 3),   
+    np.arange(22, 38, 3)   
 ])  
+
+# Trigger configuration
+PHASED_THRESHOLD     =  40   # per-channel thresholds in ADC
+UPSAMPLE_FACTOR      = 4 # upsampling factor for the pulse
+PHASED_BEAMS = [
+    -60.0, -45.11838005, -33.44299614, -23.18167437, -13.66170567,
+    -4.51554582, 4.51554582, 13.66170567, 23.18167437, 33.44299614,
+    45.11838005, 60.0
+] # Phased beam angles in degrees
+POWER_WINDOW_SIZE = 24 #Samples (upsampled sampling)
+POWER_WINDOOW_STEP = 4 #Samples (upsampled sampling)
+POWER_DIVISION_FACTOR = 32
+PHASED_TRIGGER_PARAMETERS = [PHASED_THRESHOLD, UPSAMPLE_FACTOR, PHASED_BEAMS,POWER_WINDOW_SIZE, POWER_WINDOOW_STEP, POWER_DIVISION_FACTOR]
+
 
 #preparring the sample pulse
 with open('/home/shamshassiki/Shams_Analyzing_scripts/Trigger_simulation_and_tests/jsons/upsampled_2filter_pulse_example.json') as f:
@@ -70,10 +83,11 @@ for run, run_pulse_amplitude in enumerate(PULSE_AMPLITUDES):
         time_axis = t + time_start  # Adjust time axis for the current run
         #finding if channels exceed the threshold
         SNR = run_pulse_amplitude / NOISE_EQUALIZE
-        triggers = find_triggers(channel_signals, time_axis, threshold=THRESHOLD_V, coincidence_ns=COINC_NS, n_channels_required=N_REQ)
-        if len(triggers) > 0:
+        triggers = find_phased_triggers(channel_signals, time_axis, PHASED_TRIGGER_PARAMETERS)
+        if triggers:
             COINC += 1
     pass_fraction.append(COINC / SCAN_RATE)
+    print(COINC, COINC / SCAN_RATE)
     SNR_values.append(SNR)
     print(f"\r Progress: {run+1}/{len(PULSE_AMPLITUDES)} completed", end='')
 
@@ -92,11 +106,11 @@ plt.plot(SNR_values, pass_fraction, marker='o', label='Pass Fraction vs SNR')
 plt.plot(SNR_values, pass_fraction_sigmoid, marker='x', linestyle='--', label='Sigmoid Fit')
 plt.axhline(y=0.5, color='r', linestyle='--', label='50% Pass Threshold')
 plt.axvline(x=b, color='g', linestyle='--', label='50% eff SNR at {:.2f}'.format(b))
-plt.title('Hi-Lo Trigger Efficiency Scan TESTNOW_2')
+plt.title('Phased Trigger Efficiency Scan')
 plt.xlabel('SNR')
 plt.ylabel('Pass Fraction')
 plt.grid()
 plt.legend()
-plt.savefig("TESTNOW_SCAN_5_800rate_0deg.png")
+plt.savefig("Phased_test_0.png")
 
 
