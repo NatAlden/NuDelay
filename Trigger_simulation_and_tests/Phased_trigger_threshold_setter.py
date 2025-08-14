@@ -24,16 +24,12 @@ N_of_channels = 4
 THRESHOLD_V= [18,21,19,21]  # ADC counts
 N_REQ = 2  # Number of channels required for a trigger
 COINC_NS = SIMULATION_DURATION_NS
-SCAN_RATE = 70 
-PULSE_AMPLITUDES = np.concatenate([
-    np.arange(4, 8, 2),
-    np.arange(8, 17, 0.7),
-    np.arange(17, 27, 2),
-])
+SCAN_RATE = 1000 
+PULSE_AMPLITUDES = np.array([0,1])
 
 
 # Trigger configuration
-PHASED_THRESHOLD     = 50   # per-channel thresholds in ADC
+PHASED_THRESHOLD     = 30   # per-channel thresholds in ADC
 UPSAMPLE_FACTOR      = 4 # upsampling factor for the pulse
 PHASED_BEAMS = [
     -60.0, -45.11838005, -33.44299614, -23.18167437, -13.66170567,
@@ -113,6 +109,6 @@ plt.xlabel('SNR')
 plt.ylabel('Pass Fraction')
 plt.grid()
 plt.legend()
-plt.savefig("Phased_test_2.png")
+#plt.savefig("Phased_test_0.png")
 
 

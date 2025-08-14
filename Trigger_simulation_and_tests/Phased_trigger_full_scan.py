@@ -6,13 +6,7 @@ from pathlib import Path
 from scipy.optimize import curve_fit
 
 # bring in your simulation helpers
-from sim_functions import (
-    make_full_signal_angle,
-    find_triggers,
-    plot_4_channels_signals,
-    sigmoid,
-    fit_sigmoid_get_b
-)
+from sim_functions import *
 
 # ===================== USER CONFIG =====================
 # Sampling and simulation window
@@ -27,7 +21,7 @@ SIMULATION_DURATION_SAMPLES = int(SIMULATION_DURATION_NS / TIME_STEP) + 1
 N_CHANNELS      = 4
 
 # Trigger configuration
-PHASED_THRESHOLD     =  900   # per-channel thresholds in ADC
+PHASED_THRESHOLD     =  50   # per-channel thresholds in ADC
 UPSAMPLE_FACTOR      = 4 # upsampling factor for the pulse
 PHASED_BEAMS = [
     -60.0, -45.11838005, -33.44299614, -23.18167437, -13.66170567,
@@ -40,23 +34,24 @@ POWER_DIVISION_FACTOR = 32
 PHASED_TRIGGER_PARAMETERS = [PHASED_THRESHOLD, UPSAMPLE_FACTOR, PHASED_BEAMS,POWER_WINDOW_SIZE, POWER_WINDOOW_STEP, POWER_DIVISION_FACTOR]
 
 # Scan settings
-ANGLES_DEG      = np.arange(0, 12, 1)      # angles to scan
+ANGLES_DEG      = np.arange(-20,1, 0.5)      # angles to scan
 # Keep your finer spacing between 10 and 20, otherwise step 2
-PULSE_AMPLITUDES = np.concatenate([
-    np.arange(6, 12, 2),
-    np.arange(12, 21, 0.7),
-    np.arange(22, 38, 2),
+PULSE_AMPLITUDES =np.concatenate([
+    np.arange(4, 8, 2),
+    np.arange(8, 17, 0.7),
+    np.arange(17, 27, 2),
 ])
 
-SCAN_RATE       = 100   # repeats per amplitude
+
+SCAN_RATE       = 140   # repeats per amplitude
 
 # I/O
 IMPULSE_JSON    = Path("/home/shamshassiki/Shams_Analyzing_scripts/Trigger_simulation_and_tests/jsons/impulse_response_Freauency_35_240.json")
 PULSE_JSON      = Path("/home/shamshassiki/Shams_Analyzing_scripts/Trigger_simulation_and_tests/jsons/upsampled_2filter_pulse_example.json")
 
-FINAL_PNG       = "Test_from_0to11_HiLo_effect.png"
-SAVE_PER_ANGLE  = True
-PER_ANGLE_PREFIX= "Test_from_0to11_HiLo_effect_single.png"
+FINAL_PNG       = "Test_Phased_trigger_over_angles_delete.png"
+SAVE_PER_ANGLE  = False
+PER_ANGLE_PREFIX= "Test_Phasedtrigger_angles_report.png"
 
 
 # =======================================================
@@ -90,7 +85,7 @@ def run_scan_for_angle(angle_deg):
         coinc = 0
         time_start = k * SIMULATION_DURATION_NS
         # progress hint
-        print(f"\r  angle {angle_deg:+.0f}°  amp {k+1}/{len(PULSE_AMPLITUDES)}", end="")
+        print(f"\r  angle {angle_deg}°  amp {k+1}/{len(PULSE_AMPLITUDES)}", end="")
 
         for _ in range(SCAN_RATE):
             # one shared start seed so pulses are aligned across channels,
@@ -117,11 +112,8 @@ def run_scan_for_angle(angle_deg):
 
             time_axis = t + time_start
             snr = amp / NOISE_EQUALIZE
-            triggers = find_triggers(channel_signals, time_axis,
-                                     threshold=THRESHOLD_V,
-                                     coincidence_ns=COINC_NS,
-                                     n_channels_required=N_REQ)
-            if len(triggers) > 0:
+            triggers = find_phased_triggers(channel_signals, time_axis, PHASED_TRIGGER_PARAMETERS)
+            if triggers:
                 coinc += 1
 
         pass_fraction.append(coinc / SCAN_RATE)
@@ -134,7 +126,7 @@ def run_scan_for_angle(angle_deg):
 # ---------- main loop over angles ----------
 snr50_by_angle = []
 for i, ang in enumerate(ANGLES_DEG):
-    print(f"\nScanning angle {ang:+.0f} deg...")
+    print(f"\nScanning angle {ang} deg...")
     SNR_vals, pass_frac, a, b = run_scan_for_angle(ang)
     snr50_by_angle.append((ang, b))
 
@@ -145,12 +137,12 @@ for i, ang in enumerate(ANGLES_DEG):
         plt.axhline(0.5, color="r", linestyle="--", linewidth=1)
         plt.axvline(b,   color="g", linestyle="--", linewidth=1,
                     label=f"50% eff SNR = {b:.2f}")
-        plt.title(f"Hi-Lo trigger efficiency — angle {ang:+.0f}°")
+        plt.title(f"Phased trigger efficiency — angle {ang}°")
         plt.xlabel("SNR")
         plt.ylabel("Pass fraction")
         plt.grid(True, alpha=0.4)
         plt.legend()
-        out = f"{PER_ANGLE_PREFIX}_{ang:+.0f}deg.png".replace("+", "p").replace("-", "m")
+        out = f"{PER_ANGLE_PREFIX}_{ang}deg.png".replace("+", "p").replace("-", "m")
         plt.tight_layout()
         plt.savefig(out, dpi=200)
         plt.close()
@@ -163,7 +155,7 @@ snr50   = snr50[order]
 
 plt.figure(figsize=(9, 6))
 plt.plot(angles, snr50, "o-", label="50% efficiency SNR")
-plt.title("Hi-Lo 50% efficiency vs angle")
+plt.title("Phased 50% efficiency vs angle")
 plt.xlabel("Angle (deg)")
 plt.ylabel("SNR at 50% efficiency")
 plt.grid(True, alpha=0.4)

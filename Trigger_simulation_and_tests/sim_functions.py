@@ -109,7 +109,7 @@ def generate_pulse (pulse_v, pulse_t , STEP, simulation_index_duration, amplitud
     start_index = np.argmin(np.abs(pulse_t - start_time))
     zeros_array=np.zeros(len(pulse_v), dtype=pulse_v.dtype)
     pulse_v_zeros= np.concatenate((pulse_v, zeros_array))
-    pulse_indices = np.linspace(start_index, start_index + len(pulse_v) - 1, simulation_index_duration, dtype=int)
+    pulse_indices = np.linspace(start_index, start_index + len(pulse_v), simulation_index_duration, dtype=int)
     #pulse_indices= np.linspace(start_index, len(pulse_v)-1, simulation_index_duration, dtype=int)
     
     signal = pulse_v_zeros[pulse_indices] * amplitude_scale  # Scale the pulse voltage
@@ -292,7 +292,6 @@ def shift_by_samples(sig, shift_samp):
     pad = np.zeros(L, dtype=sig.dtype)
     ext = np.concatenate([pad, sig, pad])      # safe index range: [0 .. 3L-1]
     idx = np.arange(L) - int(shift_samp) + L   # map 0..L-1 into ext
-    print(idx)
     return ext[idx]
 
 def per_channel_delay_ns(angle_deg, ch_idx):
@@ -366,29 +365,24 @@ def find_phased_triggers(channel_signals, time_axis, phased_trigger_parameters):
      POWER_DIVISION_FACTOR) = phased_trigger_parameters
 
     n_ch = len(channel_signals)
-    if n_ch == 0:
-        return []
 
-    time_axis = np.asarray(time_axis)
     dt_ns  = float(time_axis[1] - time_axis[0])
     fs_orig = 1.0 / dt_ns
     fs_up   = fs_orig * UPSAMPLE_FACTOR
     dt_up   = dt_ns / UPSAMPLE_FACTOR
 
-    # 1) Upsample: zero-stuff + quantized FIR low-pass (firmware-like)
+
     taps = firwin(45, cutoff=fs_orig * 0.5, pass_zero='lowpass', fs=fs_up)
     taps = np.round(taps * 256) / 256.0
-
     up_ch = []
     for ch in range(n_ch):
         x = np.asarray(channel_signals[ch], dtype=float)
         up = np.zeros(len(x) * UPSAMPLE_FACTOR, dtype=float)
         up[::UPSAMPLE_FACTOR] = x
-        up_filt = lfilter(taps, [1.0], up)
+        up_filt = lfilter(taps, [1.0], up) * UPSAMPLE_FACTOR  # upsampled + FIR LPF
         up_ch.append(up_filt)
     up_ch = np.asarray(up_ch)              # (n_ch, n_up)
     n_up  = up_ch.shape[1]
-
     t0   = float(time_axis[0])
     t_up = t0 + np.arange(n_up) * dt_up
 

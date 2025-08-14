@@ -40,7 +40,7 @@ PULSE_AMPLITUDES = np.concatenate([
     np.arange(22, 38, 2),
 ])
 
-SCAN_RATE       = 800   # repeats per amplitude
+SCAN_RATE       = 300   # repeats per amplitude
 
 # I/O
 IMPULSE_JSON    = Path("/home/shamshassiki/Shams_Analyzing_scripts/Trigger_simulation_and_tests/jsons/impulse_response_Freauency_35_240.json")
@@ -82,7 +82,7 @@ def run_scan_for_angle(angle_deg):
         coinc = 0
         time_start = k * SIMULATION_DURATION_NS
         # progress hint
-        print(f"\r  angle {angle_deg:+.0f}°  amp {k+1}/{len(PULSE_AMPLITUDES)}", end="")
+        print(f"\r  angle {angle_deg}°  amp {k+1}/{len(PULSE_AMPLITUDES)}", end="")
 
         for _ in range(SCAN_RATE):
             # one shared start seed so pulses are aligned across channels,
@@ -126,7 +126,7 @@ def run_scan_for_angle(angle_deg):
 # ---------- main loop over angles ----------
 snr50_by_angle = []
 for i, ang in enumerate(ANGLES_DEG):
-    print(f"\nScanning angle {ang:+.0f} deg...")
+    print(f"\nScanning angle {ang} deg...")
     SNR_vals, pass_frac, a, b = run_scan_for_angle(ang)
     snr50_by_angle.append((ang, b))
 
@@ -137,12 +137,12 @@ for i, ang in enumerate(ANGLES_DEG):
         plt.axhline(0.5, color="r", linestyle="--", linewidth=1)
         plt.axvline(b,   color="g", linestyle="--", linewidth=1,
                     label=f"50% eff SNR = {b:.2f}")
-        plt.title(f"Hi-Lo trigger efficiency — angle {ang:+.0f}°")
+        plt.title(f"Hi-Lo trigger efficiency — angle {ang}°")
         plt.xlabel("SNR")
         plt.ylabel("Pass fraction")
         plt.grid(True, alpha=0.4)
         plt.legend()
-        out = f"{PER_ANGLE_PREFIX}_{ang:+.0f}deg.png".replace("+", "p").replace("-", "m")
+        out = f"{PER_ANGLE_PREFIX}_{ang}deg.png".replace("+", "p").replace("-", "m")
         plt.tight_layout()
         plt.savefig(out, dpi=200)
         plt.close()
